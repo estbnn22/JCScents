@@ -5,10 +5,11 @@
   "scripts": {
     "catalog:extract": "node scripts/extract-men-catalog.mjs",
     "dev": "next dev",
+    "postinstall": "prisma generate",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "prisma db seed",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint"
   },
