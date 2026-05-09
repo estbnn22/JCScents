@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+  engineType = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum CatalogType {
+  MEN
+}
+
+enum FragranceStatus {
+  ACTIVE
+  COMING_SOON
+}
+
+model Fragrance {
+  id          String          @id @default(cuid())
+  catalog     CatalogType     @default(MEN)
+  fullName    String
+  slug        String          @unique
+  rawText     String?
+  sourcePage  Int             @unique
+  status      FragranceStatus @default(ACTIVE)
+  detailsCustomized Boolean   @default(false)
+  imagePath   String?
+  summary     String?
+  momentTags  String[]        @default([])
+  seasonTags  String[]        @default([])
+  accordNames String[]        @default([])
+  accordStrengths Int[]       @default([])
+  topNotes    String[]        @default([])
+  middleNotes String[]        @default([])
+  baseNotes   String[]        @default([])
+  sizes       FragranceSize[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  @@index([catalog, status, sourcePage])
+}
+
+model FragranceSize {
+  id          String    @id @default(cuid())
+  fragranceId String
+  fragrance   Fragrance @relation(fields: [fragranceId], references: [id], onDelete: Cascade)
+  sizeMl      Int
+  price       Decimal   @db.Decimal(10, 2)
+  sortOrder   Int
+  createdAt   DateTime  @default(now())
+
+  @@unique([fragranceId, sizeMl])
+  @@index([sizeMl, sortOrder])
+}

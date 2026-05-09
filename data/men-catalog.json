@@ -1,0 +1,7158 @@
+[
+  {
+    "sourcePage": 2,
+    "fullName": "Chanel Allure Homme Sport Superleggera",
+    "slug": "chanel-allure-homme-sport-superleggera",
+    "rawText": "Day Night Sprint Summer Fall Winter | Chanel Allure Homme Sport Superleggera | $35.00 $25.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "35.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 3,
+    "fullName": "Chanel Allure Homme Sport Eau Extreme",
+    "slug": "chanel-allure-homme-sport-eau-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Chanel Allure Homme Sport Eau Extreme | 10ML | 5ML | 3ML | $30.00 | $20.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 4,
+    "fullName": "Chanel Allure Homme",
+    "slug": "chanel-allure-homme",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Chanel Allure Homme | 10ML | 5ML | 3ML | $30.00 | $20.00 $12.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 5,
+    "fullName": "Bleu de Chanel",
+    "slug": "bleu-de-chanel",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bleu de Chanel | 10ML | 5ML | 3ML | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 6,
+    "fullName": "Bleu de Chanel Eau de Parfum",
+    "slug": "bleu-de-chanel-eau-de-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bleu de Chanel Eau de Parfum | $28.00 | $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "28.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 7,
+    "fullName": "Bleu de Chanel Parfum",
+    "slug": "bleu-de-chanel-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bleu de Chanel Parfum | $35.00 | $25.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "35.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 8,
+    "fullName": "Bleu de Chanel L’Exclusif",
+    "slug": "bleu-de-chanel-l-exclusif",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bleu de Chanel L’Exclusif | $45.00 | $35.00 $25.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "45.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "35.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "25.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 9,
+    "fullName": "Versace Eros EDP",
+    "slug": "versace-eros-edp",
+    "rawText": "Day Night Sprint Summer Fall Winter | Versace Eros EDP | $ $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 10,
+    "fullName": "Versace Eros Flame",
+    "slug": "versace-eros-flame",
+    "rawText": "Day Night Sprint Summer Fall Winter | Versace Eros Flame | $20.00 $15.00 $10.00 | $",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 11,
+    "fullName": "Versace Eros Energy",
+    "slug": "versace-eros-energy",
+    "rawText": "Day Night Sprint Summer Fall Winter | Versace Eros Energy | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 12,
+    "fullName": "Versace Eros Najin",
+    "slug": "versace-eros-najin",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Versace Eros Najin | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 13,
+    "fullName": "Versace Pour Homme Dylan Blue",
+    "slug": "versace-pour-homme-dylan-blue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Versace Pour Homme Dylan Blue | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 14,
+    "fullName": "Loewe Cobalt 7",
+    "slug": "loewe-cobalt-7",
+    "rawText": "Day Night Sprint Summer Fall Winter | Loewe Cobalt 7 | $27.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "27.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 15,
+    "fullName": "Le Male Jean Paul gaultier",
+    "slug": "le-male-jean-paul-gaultier",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Male Jean Paul gaultier | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 16,
+    "fullName": "Le Male Ultra Male",
+    "slug": "le-male-ultra-male",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Male Ultra Male | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 17,
+    "fullName": "Le Male in Bleu",
+    "slug": "le-male-in-bleu",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Le Male in Bleu | $30.00 $20.00 $15.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 18,
+    "fullName": "Le Male Le Parfum",
+    "slug": "le-male-le-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Male Le Parfum | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 19,
+    "fullName": "Le Male Elixir",
+    "slug": "le-male-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Male Elixir | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 20,
+    "fullName": "Le Male Elixir Absolute",
+    "slug": "le-male-elixir-absolute",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Male Elixir Absolute | $28.00 | $ $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "28.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 21,
+    "fullName": "Le Beau Jean Paul gaultier",
+    "slug": "le-beau-jean-paul-gaultier",
+    "rawText": "Le Beau Jean Paul gaultier | $20.00 $15.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 22,
+    "fullName": "Le Beau Le Parfum",
+    "slug": "le-beau-le-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Beau Le Parfum | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 23,
+    "fullName": "Le Beau Paradise Garden",
+    "slug": "le-beau-paradise-garden",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Beau Paradise Garden | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 24,
+    "fullName": "Le Beau Flower Edition",
+    "slug": "le-beau-flower-edition",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Beau Flower Edition | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 25,
+    "fullName": "Le Beau Narcisse",
+    "slug": "le-beau-narcisse",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Le Beau Narcisse | $30.00 $20.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 26,
+    "fullName": "Scandal Pour Homme Le Parfum",
+    "slug": "scandal-pour-homme-le-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Scandal Pour Homme Le Parfum | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 27,
+    "fullName": "Scandal Pour Homme Intense",
+    "slug": "scandal-pour-homme-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Scandal Pour Homme Intense | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 28,
+    "fullName": "Scandal Absolute",
+    "slug": "scandal-absolute",
+    "rawText": "Day Night Sprint Summer Fall Winter | Scandal Absolute | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 29,
+    "fullName": "Scandal Elixir",
+    "slug": "scandal-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Scandal Elixir | $30.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 30,
+    "fullName": "Side Eﬀect Initio Parfums",
+    "slug": "side-effect-initio-parfums",
+    "rawText": "Day Night Sprint Summer Fall Winter | Side Eﬀect Initio Parfums | $47.00 | $37.00 $27.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "47.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "37.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "27.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 31,
+    "fullName": "Naxos 1861 Xerjof",
+    "slug": "naxos-1861-xerjof",
+    "rawText": "Day Night Sprint Summer Fall Winter | Naxos 1861 Xerjof | $47.00 | $37.00 $27.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "47.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "37.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "27.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 32,
+    "fullName": "Casamorati Mefisto Xerjoff",
+    "slug": "casamorati-mefisto-xerjoff",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Casamorati Mefisto Xerjoff | $47.00 | $37.00 $27.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "47.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "37.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "27.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 33,
+    "fullName": "Gentiluomo Casamorati 1888 Xerjoff",
+    "slug": "gentiluomo-casamorati-1888-xerjoff",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Gentiluomo Casamorati 1888 Xerjoff | $47.00 | $37.00 $27.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "47.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "37.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "27.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 34,
+    "fullName": "Fiero Casamorati 1888 Xerjoff",
+    "slug": "fiero-casamorati-1888-xerjoff",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Fiero Casamorati 1888 Xerjoff | $47.00 | $37.00 $27.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "47.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "37.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "27.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 35,
+    "fullName": "Torino 25 Xerjof",
+    "slug": "torino-25-xerjof",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Torino 25 Xerjof | $47.00 | $37.00 $27.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "47.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "37.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "27.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 36,
+    "fullName": "40 Knots Xerjof",
+    "slug": "40-knots-xerjof",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | 40 Knots Xerjof | $47.00 | $37.00 $27.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "47.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "37.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "27.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 37,
+    "fullName": "Percival Parfums de Marly",
+    "slug": "percival-parfums-de-marly",
+    "rawText": "Day Night Sprint Summer Fall Winter | Percival Parfums de Marly | $38.00 | $28.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 38,
+    "fullName": "Sedley Parfums de Marly",
+    "slug": "sedley-parfums-de-marly",
+    "rawText": "Day Night Sprint Summer Fall Winter | Sedley Parfums de Marly | $38.00 | $28.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 39,
+    "fullName": "Galoway Parfums de Marly",
+    "slug": "galoway-parfums-de-marly",
+    "rawText": "Day Night Sprint Summer Fall Winter | Galoway Parfums de Marly | $38.00 | $28.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 40,
+    "fullName": "Perseus Parfums de Marly",
+    "slug": "perseus-parfums-de-marly",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Perseus Parfums de Marly | $38.00 | $28.00 $20.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 41,
+    "fullName": "Castley Parfums de Marly",
+    "slug": "castley-parfums-de-marly",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Castley Parfums de Marly | $38.00 | $28.00 $20.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 42,
+    "fullName": "Haltane Parfums de Marly",
+    "slug": "haltane-parfums-de-marly",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Haltane Parfums de Marly | $38.00 | $28.00 $20.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 43,
+    "fullName": "Absolu Aventus Creed",
+    "slug": "absolu-aventus-creed",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Absolu Aventus Creed | $75.00 | $45.00 $30.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "75.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "45.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "30.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 44,
+    "fullName": "Green Irish Tweed Creed",
+    "slug": "green-irish-tweed-creed",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Green Irish Tweed Creed | $75.00 | $45.00 $30.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "75.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "45.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "30.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 45,
+    "fullName": "Silver Mountain Water Creed",
+    "slug": "silver-mountain-water-creed",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Silver Mountain Water Creed | $75.00 | $45.00 $30.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "75.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "45.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "30.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 46,
+    "fullName": "Millésime Impérial Creed",
+    "slug": "millesime-imperial-creed",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Millésime Impérial Creed | $75.00 | $45.00 $30.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "75.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "45.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "30.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 47,
+    "fullName": "Viking Creed",
+    "slug": "viking-creed",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Viking Creed | $75.00 | $45.00 $30.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "75.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "45.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "30.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 48,
+    "fullName": "Original Santal Creed",
+    "slug": "original-santal-creed",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Original Santal Creed | $75.00 | $45.00 $30.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "75.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "45.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "30.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 49,
+    "fullName": "Mind Games French Defense",
+    "slug": "mind-games-french-defense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Mind Games French Defense | $75.00 | $45.00 $30.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "75.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "45.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "30.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 50,
+    "fullName": "Cherry Punk Room 1015",
+    "slug": "cherry-punk-room-1015",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Cherry Punk Room 1015 | $38.00 | $28.00 $20.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 51,
+    "fullName": "Cherry Punk Room 1015",
+    "slug": "cherry-punk-room-1015-51",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Cherry Punk Room 1015 | $38.00 | $28.00 $20.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 52,
+    "fullName": "Tom Ford Costa Azzurra",
+    "slug": "tom-ford-costa-azzurra",
+    "rawText": "Day Night Sprint Summer Fall Winter | Tom Ford Costa Azzurra | $38.00 | $28.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 53,
+    "fullName": "Tom Ford Bois Pacifique",
+    "slug": "tom-ford-bois-pacifique",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Tom Ford Bois Pacifique | $38.00 | $28.00 $20.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 54,
+    "fullName": "Tom Ford Oud Mineral",
+    "slug": "tom-ford-oud-mineral",
+    "rawText": "Day Night Sprint Summer Fall Winter | Tom Ford Oud Mineral | $38.00 | $28.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 55,
+    "fullName": "Tom Ford Noir Extreme",
+    "slug": "tom-ford-noir-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Tom Ford Noir Extreme | $38.00 | $28.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 56,
+    "fullName": "Tom Ford Eau d’ Ombrè Leather",
+    "slug": "tom-ford-eau-d-ombre-leather",
+    "rawText": "Day Night Sprint Summer Fall Winter | Tom Ford Eau d’ Ombrè Leather | $38.00 | $28.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "38.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "28.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 57,
+    "fullName": "Tom Ford Ombrè Leather Parfum",
+    "slug": "tom-ford-ombre-leather-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Tom Ford Ombrè Leather Parfum | $45.00 | $35.00 $25.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "45.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "35.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "25.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 58,
+    "fullName": "Givenchy Gentleman Society Sport",
+    "slug": "givenchy-gentleman-society-sport",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Givenchy Gentleman Society Sport | $25.00 $17.00 $13.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "13.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 59,
+    "fullName": "Givenchy Gentleman Society",
+    "slug": "givenchy-gentleman-society",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Givenchy Gentleman Society | $25.00 $17.00 $13.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "13.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 60,
+    "fullName": "Givenchy Gentleman Society Extreme",
+    "slug": "givenchy-gentleman-society-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Givenchy Gentleman Society Extreme | $25.00 $17.00 $13.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "13.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 61,
+    "fullName": "Givenchy Gentleman Society Ambrée",
+    "slug": "givenchy-gentleman-society-ambree",
+    "rawText": "Day Night Sprint Summer Fall Winter | Givenchy Gentleman Society Ambrée | $25.00 $17.00 $13.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "13.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 62,
+    "fullName": "Gentleman Intense Givenchy",
+    "slug": "gentleman-intense-givenchy",
+    "rawText": "Day Night Sprint Summer Fall Winter | Gentleman Intense Givenchy | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 63,
+    "fullName": "Gentleman EDP Givenchy",
+    "slug": "gentleman-edp-givenchy",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Gentleman EDP Givenchy | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 64,
+    "fullName": "Gentleman Reserve Privee Givenchy",
+    "slug": "gentleman-reserve-privee-givenchy",
+    "rawText": "Day Night Sprint Summer Fall Winter | Gentleman Reserve Privee Givenchy | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 65,
+    "fullName": "Stronger With You Intensely",
+    "slug": "stronger-with-you-intensely",
+    "rawText": "Day Night Sprint Summer Fall Winter | Stronger With You Intensely | $25.00 $17.00 $13.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "13.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 66,
+    "fullName": "Stronger With You Absolutely",
+    "slug": "stronger-with-you-absolutely",
+    "rawText": "Day Night Sprint Summer Fall Winter | Stronger With You Absolutely | $25.00 $17.00 $13.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "13.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 67,
+    "fullName": "Stronger With Your Parfum",
+    "slug": "stronger-with-your-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Stronger With Your Parfum | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 68,
+    "fullName": "Stronger With Your Powerfully",
+    "slug": "stronger-with-your-powerfully",
+    "rawText": "Day Night Sprint Summer Fall Winter | Stronger With Your Powerfully | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 69,
+    "fullName": "Stronger With You Sandalwood",
+    "slug": "stronger-with-you-sandalwood",
+    "rawText": "Day Night Sprint Summer Fall Winter | Stronger With You Sandalwood | $30.00 $25.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 70,
+    "fullName": "Armani Code Parfum",
+    "slug": "armani-code-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Armani Code Parfum | $25.00 | $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 71,
+    "fullName": "Armani Code Elixir",
+    "slug": "armani-code-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Armani Code Elixir | 5ML | $30.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 5,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "sourcePage": 72,
+    "fullName": "Gucci Guilty Absolu de Parfum",
+    "slug": "gucci-guilty-absolu-de-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Gucci Guilty Absolu de Parfum | 5ML | $30.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 5,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "sourcePage": 73,
+    "fullName": "Y Eau de Toilette YSL",
+    "slug": "y-eau-de-toilette-ysl",
+    "rawText": "Day Night Sprint Summer Fall Winter | Y Eau de Toilette YSL | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 74,
+    "fullName": "Y Eau de Parfum YSL",
+    "slug": "y-eau-de-parfum-ysl",
+    "rawText": "Day Night Sprint Summer Fall Winter | Y Eau de Parfum YSL | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 75,
+    "fullName": "Y Iced Cologne YSL",
+    "slug": "y-iced-cologne-ysl",
+    "rawText": "Day Night Sprint Summer Fall Winter | Y Iced Cologne YSL | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 76,
+    "fullName": "Y Eau de Parfum Intense YSL",
+    "slug": "y-eau-de-parfum-intense-ysl",
+    "rawText": "Day Night Sprint Summer Fall Winter | Y Eau de Parfum Intense YSL | $25.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 77,
+    "fullName": "Y Le Parfum 2025 YSL",
+    "slug": "y-le-parfum-2025-ysl",
+    "rawText": "Day Night Sprint Summer Fall Winter | Y Le Parfum 2025 YSL | $35.00 $25.00 $17.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "35.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "17.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 78,
+    "fullName": "Y Le Parfum YSL 2022",
+    "slug": "y-le-parfum-ysl-2022",
+    "rawText": "Day Night Sprint Summer Fall Winter | Y Le Parfum YSL 2022 | $35.00 $25.00 $17.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "35.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "17.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 79,
+    "fullName": "Y L’Elixir de YSL",
+    "slug": "y-l-elixir-de-ysl",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Y L’Elixir de YSL | 5ML | $30.00 $20.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 5,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 3,
+        "price": "20.00",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "sourcePage": 80,
+    "fullName": "MYSLF Eau de Parfum",
+    "slug": "myslf-eau-de-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | MYSLF Eau de Parfum | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 81,
+    "fullName": "MYSLF L’Absolu",
+    "slug": "myslf-l-absolu",
+    "rawText": "Day Night Sprint Summer Fall Winter | MYSLF L’Absolu | $30.00 | $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 82,
+    "fullName": "MYSLF Le Parfum",
+    "slug": "myslf-le-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | MYSLF Le Parfum | $30.00 | $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 83,
+    "fullName": "Valentino Born In Roma",
+    "slug": "valentino-born-in-roma",
+    "rawText": "Day Night Sprint Summer Fall Winter | Valentino Born In Roma | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 84,
+    "fullName": "Valentino Born In Roma Intense",
+    "slug": "valentino-born-in-roma-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Valentino Born In Roma Intense | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 85,
+    "fullName": "Valentino Born In Roma Coral Fantasy",
+    "slug": "valentino-born-in-roma-coral-fantasy",
+    "rawText": "Day Night Sprint Summer Fall Winter | Valentino Born In Roma Coral Fantasy | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 86,
+    "fullName": "Valentino Born In Roma Extradose",
+    "slug": "valentino-born-in-roma-extradose",
+    "rawText": "Day Night Sprint Summer Fall Winter | Valentino Born In Roma Extradose | $30.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 87,
+    "fullName": "Valentino Purple Melancholia",
+    "slug": "valentino-purple-melancholia",
+    "rawText": "Day Night Sprint Summer Fall Winter | Valentino Purple Melancholia | $30.00 $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 88,
+    "fullName": "Prada Luna Rossa Ocean EDT",
+    "slug": "prada-luna-rossa-ocean-edt",
+    "rawText": "Day Night Sprint Summer Fall Winter | Prada Luna Rossa Ocean EDT | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 89,
+    "fullName": "Prada Luna Rossa Ocean EDP",
+    "slug": "prada-luna-rossa-ocean-edp",
+    "rawText": "Day Night Sprint Summer Fall Winter | Prada Luna Rossa Ocean EDP | $25.00 | $17.00 $13.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "13.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 90,
+    "fullName": "Prada Luna Rossa Carbon",
+    "slug": "prada-luna-rossa-carbon",
+    "rawText": "Day Night Sprint Summer Fall Winter | Prada Luna Rossa Carbon | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 91,
+    "fullName": "Prada Luna Rossa Carbon EDP",
+    "slug": "prada-luna-rossa-carbon-edp",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Prada Luna Rossa Carbon EDP | $25.00 $17.00 $12.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 92,
+    "fullName": "Prada L’ Homme",
+    "slug": "prada-l-homme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Prada L’ Homme | $25.00 $15.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 93,
+    "fullName": "Prada L’ Homme L’Eau",
+    "slug": "prada-l-homme-l-eau",
+    "rawText": "Day Night Sprint Summer Fall Winter | Prada L’ Homme L’Eau | $25.00 $15.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 94,
+    "fullName": "Prada L’ Homme Intense",
+    "slug": "prada-l-homme-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Prada L’ Homme Intense | $27.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "27.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 95,
+    "fullName": "Prada Paradigme",
+    "slug": "prada-paradigme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Prada Paradigme | $27.00 $20.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "27.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 96,
+    "fullName": "Dior Homme 2020",
+    "slug": "dior-homme-2020",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Homme 2020 | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 97,
+    "fullName": "Dior Homme Cologne",
+    "slug": "dior-homme-cologne",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Homme Cologne | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 98,
+    "fullName": "Dior Homme Sport",
+    "slug": "dior-homme-sport",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Homme Sport | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 99,
+    "fullName": "Dior Homme Intense",
+    "slug": "dior-homme-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Homme Intense | $25.00 $17.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "17.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 100,
+    "fullName": "Dior Homme Parfum 2025",
+    "slug": "dior-homme-parfum-2025",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Homme Parfum 2025 | $40.00 $30.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "40.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "30.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 101,
+    "fullName": "Dior Savage",
+    "slug": "dior-savage",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Savage | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 102,
+    "fullName": "Dior Savage Eau de Parfum",
+    "slug": "dior-savage-eau-de-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Savage Eau de Parfum | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 103,
+    "fullName": "Dior Savage Parfum",
+    "slug": "dior-savage-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Savage Parfum | $30.00 | $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 104,
+    "fullName": "Dior Savage Elixir",
+    "slug": "dior-savage-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dior Savage Elixir | $40.00 $25.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "40.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 105,
+    "fullName": "Dior Fahrenheit Le Parfum",
+    "slug": "dior-fahrenheit-le-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Dior Fahrenheit Le Parfum | $40.00 $25.00 $15.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "40.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 106,
+    "fullName": "Oﬃce for Men Fragance One",
+    "slug": "office-for-men-fragance-one",
+    "rawText": "Day Night Sprint Summer Fall Winter | Oﬃce for Men Fragance One | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 107,
+    "fullName": "Date For Men Fragrance One",
+    "slug": "date-for-men-fragrance-one",
+    "rawText": "Day Night Sprint Summer Fall Winter | Date For Men Fragrance One | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 108,
+    "fullName": "Back Tie For Men Fragrance One",
+    "slug": "back-tie-for-men-fragrance-one",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Back Tie For Men Fragrance One | $25.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 109,
+    "fullName": "Acqua di Giò Profondo",
+    "slug": "acqua-di-gio-profondo",
+    "rawText": "Day Night Sprint Summer Fall Winter | Acqua di Giò Profondo | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 110,
+    "fullName": "Acqua di Giò Parfum",
+    "slug": "acqua-di-gio-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Acqua di Giò Parfum | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 111,
+    "fullName": "Acqua di Giò Eau de Parfum Intense",
+    "slug": "acqua-di-gio-eau-de-parfum-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Acqua di Giò Eau de Parfum Intense | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 112,
+    "fullName": "Acqua di Giò Elixir",
+    "slug": "acqua-di-gio-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Acqua di Giò Elixir | $30.00 $20.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      }
+    ]
+  },
+  {
+    "sourcePage": 113,
+    "fullName": "Le Sel d’Issey Issey Miyake",
+    "slug": "le-sel-d-issey-issey-miyake",
+    "rawText": "Day Night Sprint Summer Fall Winter | Le Sel d’Issey Issey Miyake | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 114,
+    "fullName": "Le Sel d’Issey EDP Issey Miyake",
+    "slug": "le-sel-d-issey-edp-issey-miyake",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Le Sel d’Issey EDP Issey Miyake | $25.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 115,
+    "fullName": "Invictus Rabanne",
+    "slug": "invictus-rabanne",
+    "rawText": "Day Night Sprint Summer Fall Winter | Invictus Rabanne | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 116,
+    "fullName": "Invictus Platinum Rabanne",
+    "slug": "invictus-platinum-rabanne",
+    "rawText": "Day Night Sprint Summer Fall Winter | Invictus Platinum Rabanne | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 117,
+    "fullName": "Invictus Aqua Rabanne",
+    "slug": "invictus-aqua-rabanne",
+    "rawText": "Day Night Sprint Summer Fall Winter | Invictus Aqua Rabanne | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 118,
+    "fullName": "Invictus Parfum Rabanne",
+    "slug": "invictus-parfum-rabanne",
+    "rawText": "Day Night Sprint Summer Fall Winter | Invictus Parfum Rabanne | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 119,
+    "fullName": "Invictus Parfum Rabanne",
+    "slug": "invictus-parfum-rabanne-119",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Invictus Parfum Rabanne | $25.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 120,
+    "fullName": "Invictus Victory Elixir Rabanne",
+    "slug": "invictus-victory-elixir-rabanne",
+    "rawText": "Day Night Sprint Summer Fall Winter | Invictus Victory Elixir Rabanne | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 121,
+    "fullName": "Invictus Victory Absolute",
+    "slug": "invictus-victory-absolute",
+    "rawText": "Day Night Sprint Summer Fall Winter | Invictus Victory Absolute | $25.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 122,
+    "fullName": "Spicebomb Night Vision EDP Viktor&Rolf",
+    "slug": "spicebomb-night-vision-edp-viktor-rolf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Spicebomb Night Vision EDP Viktor&Rolf | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 123,
+    "fullName": "Spicebomb Extreme Viktor&Rolf",
+    "slug": "spicebomb-extreme-viktor-rolf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Spicebomb Extreme Viktor&Rolf | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 124,
+    "fullName": "Spicebomb Dark Leather Viktor&Rolf",
+    "slug": "spicebomb-dark-leather-viktor-rolf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Spicebomb Dark Leather Viktor&Rolf | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 125,
+    "fullName": "Spicebomb Metallic Musk Viktor&Rolf",
+    "slug": "spicebomb-metallic-musk-viktor-rolf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Spicebomb Metallic Musk Viktor&Rolf | $25.00 | $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 126,
+    "fullName": "Dolce & Gabbana Devotion Pour Homme Parfum",
+    "slug": "dolce-gabbana-devotion-pour-homme-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dolce & Gabbana Devotion Pour Homme Parfum | $25.00 | $20.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 127,
+    "fullName": "Dolce & Gabbana Light Blue EDP",
+    "slug": "dolce-gabbana-light-blue-edp",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Dolce & Gabbana Light Blue EDP | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 128,
+    "fullName": "Dolce & Gabbana Light Blue Intense",
+    "slug": "dolce-gabbana-light-blue-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dolce & Gabbana Light Blue Intense | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 129,
+    "fullName": "Dolce & Gabbana K EDP",
+    "slug": "dolce-gabbana-k-edp",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dolce & Gabbana K EDP | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 130,
+    "fullName": "Dolce & Gabbana K Parfum",
+    "slug": "dolce-gabbana-k-parfum",
+    "rawText": "Dolce & Gabbana K Parfum Day Night Sprint Summer Fall Winter | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 131,
+    "fullName": "Baritono de Nobleman Fragancias",
+    "slug": "baritono-de-nobleman-fragancias",
+    "rawText": "Day Night Sprint Summer Fall Winter | Baritono de Nobleman Fragancias | $30.00 | $25.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 132,
+    "fullName": "Dolce & Gabbana The One EDP",
+    "slug": "dolce-gabbana-the-one-edp",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dolce & Gabbana The One EDP | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 133,
+    "fullName": "Dolce & Gabbana The One Parfum",
+    "slug": "dolce-gabbana-the-one-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Dolce & Gabbana The One Parfum | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 134,
+    "fullName": "CH Men Carolina Herrera",
+    "slug": "ch-men-carolina-herrera",
+    "rawText": "Day Night Sprint Summer Fall Winter | CH Men Carolina Herrera | $15.00 | $10.00 $8.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "8.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 135,
+    "fullName": "Bad Boy Sparkling Ice",
+    "slug": "bad-boy-sparkling-ice",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bad Boy Sparkling Ice | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 136,
+    "fullName": "Bad Boy Le Parfum",
+    "slug": "bad-boy-le-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bad Boy Le Parfum | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 137,
+    "fullName": "Bad Boy Cobalt Electric",
+    "slug": "bad-boy-cobalt-electric",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bad Boy Cobalt Electric | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 138,
+    "fullName": "Bad Boy Extreme",
+    "slug": "bad-boy-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bad Boy Extreme | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 139,
+    "fullName": "Bad Boy Elixir",
+    "slug": "bad-boy-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Bad Boy Elixir | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 140,
+    "fullName": "Moschino Toy Boy",
+    "slug": "moschino-toy-boy",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Moschino Toy Boy | $25.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 141,
+    "fullName": "Moschino Toy Boy 2",
+    "slug": "moschino-toy-boy-2",
+    "rawText": "Day Night Sprint Summer Fall Winter | Moschino Toy Boy 2 | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 142,
+    "fullName": "Ginger+Mist Michael Malul",
+    "slug": "ginger-mist-michael-malul",
+    "rawText": "Day Night Sprint Summer Fall Winter | Ginger+Mist Michael Malul | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 143,
+    "fullName": "Zest+Vetiver Michael Malul",
+    "slug": "zest-vetiver-michael-malul",
+    "rawText": "Day Night Sprint Summer Fall Winter | Zest+Vetiver Michael Malul | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 144,
+    "fullName": "Jet Black Mahogany Michael Malul",
+    "slug": "jet-black-mahogany-michael-malul",
+    "rawText": "Day Night Sprint Summer Fall Winter | Jet Black Mahogany Michael Malul | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 145,
+    "fullName": "Boss Bottled Absolu",
+    "slug": "boss-bottled-absolu",
+    "rawText": "Boss Bottled Absolu Day Night Sprint Summer Fall Winter | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 146,
+    "fullName": "Boss Bottled Beyond",
+    "slug": "boss-bottled-beyond",
+    "rawText": "Day Night Sprint Summer Fall Winter | Boss Bottled Beyond | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 147,
+    "fullName": "Boss Bottled Triumph Elixir",
+    "slug": "boss-bottled-triumph-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Boss Bottled Triumph Elixir | $25.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 148,
+    "fullName": "Boss The Scent EDP Intense",
+    "slug": "boss-the-scent-edp-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Boss The Scent EDP Intense | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 149,
+    "fullName": "Phantom Rabanne",
+    "slug": "phantom-rabanne",
+    "rawText": "Day Night Sprint Summer Fall Winter | Phantom Rabanne | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 150,
+    "fullName": "Rabanne Phantom Parfum",
+    "slug": "rabanne-phantom-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rabanne Phantom Parfum | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 151,
+    "fullName": "Rabanne Phantom Intense",
+    "slug": "rabanne-phantom-intense",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rabanne Phantom Intense | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 152,
+    "fullName": "Rabanne Phantom Elixir",
+    "slug": "rabanne-phantom-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rabanne Phantom Elixir | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 153,
+    "fullName": "Rabanne Phantom in Red",
+    "slug": "rabanne-phantom-in-red",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Rabanne Phantom in Red | $25.00 | $20.00 $15.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "20.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 154,
+    "fullName": "1 Million Rabanne",
+    "slug": "1-million-rabanne",
+    "rawText": "Day Night Sprint Summer Fall Winter | 1 Million Rabanne | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 155,
+    "fullName": "1 Million Parfum",
+    "slug": "1-million-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | 1 Million Parfum | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 156,
+    "fullName": "1 Million Elixir",
+    "slug": "1-million-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | 1 Million Elixir | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 157,
+    "fullName": "1 Million Night Elixir",
+    "slug": "1-million-night-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | 1 Million Night Elixir | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 158,
+    "fullName": "1 Million Royal",
+    "slug": "1-million-royal",
+    "rawText": "1 Million Royal Day Night Sprint Summer Fall Winter | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 159,
+    "fullName": "1 Million Golden Oud",
+    "slug": "1-million-golden-oud",
+    "rawText": "Day Night Sprint Summer Fall Winter | 1 Million Golden Oud | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 160,
+    "fullName": "1 Million Lucky",
+    "slug": "1-million-lucky",
+    "rawText": "Day Night Sprint Summer Fall Winter | 1 Million Lucky | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 161,
+    "fullName": "Million Gold",
+    "slug": "million-gold",
+    "rawText": "Day Night Sprint Summer Fall Winter | Million Gold | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 162,
+    "fullName": "Million Gold Elixir",
+    "slug": "million-gold-elixir",
+    "rawText": "Million Gold Elixir Day Night Sprint Summer Fall Winter | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 163,
+    "fullName": "212 VIP Black Carolina Herrera",
+    "slug": "212-vip-black-carolina-herrera",
+    "rawText": "Day Night Sprint Summer Fall Winter | 212 VIP Black Carolina Herrera | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 164,
+    "fullName": "212 VIP Black Elixir CH",
+    "slug": "212-vip-black-elixir-ch",
+    "rawText": "Day Night Sprint Summer Fall Winter | 212 VIP Black Elixir CH | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 165,
+    "fullName": "212 VIP Parfum CH",
+    "slug": "212-vip-parfum-ch",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | 212 VIP Parfum CH | $25.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 166,
+    "fullName": "Terre d'Hermès",
+    "slug": "terre-d-hermes",
+    "rawText": "Day Night Sprint Summer Fall Winter | Terre d'Hermès | $20.00 | $10.00 $8.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "8.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 167,
+    "fullName": "Terre d'Hermès Parfum",
+    "slug": "terre-d-hermes-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Terre d'Hermès Parfum | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 168,
+    "fullName": "Terre d'Hermès Eau Givree",
+    "slug": "terre-d-hermes-eau-givree",
+    "rawText": "Day Night Sprint Summer Fall Winter | Terre d'Hermès Eau Givree | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 169,
+    "fullName": "Pour Homme Absolu Michael Kors",
+    "slug": "pour-homme-absolu-michael-kors",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Pour Homme Absolu Michael Kors | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 170,
+    "fullName": "Guerlain L'Homme Idéal EDT",
+    "slug": "guerlain-l-homme-ideal-edt",
+    "rawText": "Day Night Sprint Summer Fall Winter | Guerlain L'Homme Idéal EDT | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 171,
+    "fullName": "Guerlain L'Homme Idéal EDP",
+    "slug": "guerlain-l-homme-ideal-edp",
+    "rawText": "Day Night Sprint Summer Fall Winter | Guerlain L'Homme Idéal EDP | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 172,
+    "fullName": "Guerlain L'Homme Idéal Extrême",
+    "slug": "guerlain-l-homme-ideal-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Guerlain L'Homme Idéal Extrême | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 173,
+    "fullName": "Guerlain L'Homme Idéal Parfum",
+    "slug": "guerlain-l-homme-ideal-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Guerlain L'Homme Idéal Parfum | $25.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 174,
+    "fullName": "Guerlain Habit Rouge Parfum",
+    "slug": "guerlain-habit-rouge-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Guerlain Habit Rouge Parfum | $30.00 | $25.00 $15.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "30.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "25.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "15.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 175,
+    "fullName": "Vetiver De Guerlain",
+    "slug": "vetiver-de-guerlain",
+    "rawText": "Day Night Sprint Summer Fall Winter | Vetiver De Guerlain | $20.00 | $15.00 $12.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "12.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 176,
+    "fullName": "The Most Wanted Intense Azzaro",
+    "slug": "the-most-wanted-intense-azzaro",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | The Most Wanted Intense Azzaro | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 177,
+    "fullName": "The Most Wanted Intense Azzaro",
+    "slug": "the-most-wanted-intense-azzaro-177",
+    "rawText": "Day Night Sprint Summer Fall Winter | The Most Wanted Intense Azzaro | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 178,
+    "fullName": "The Most Wanted Parfum Azzaro",
+    "slug": "the-most-wanted-parfum-azzaro",
+    "rawText": "Day Night Sprint Summer Fall Winter | The Most Wanted Parfum Azzaro | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 179,
+    "fullName": "Forever Wanted Elixir Azzaro",
+    "slug": "forever-wanted-elixir-azzaro",
+    "rawText": "Day Night Sprint Summer Fall Winter | Forever Wanted Elixir Azzaro | $25.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 180,
+    "fullName": "Forever Wanted Absolu Azzaro",
+    "slug": "forever-wanted-absolu-azzaro",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Forever Wanted Absolu Azzaro | $25.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "25.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 181,
+    "fullName": "Wanted Eau de Parfum Azzaro",
+    "slug": "wanted-eau-de-parfum-azzaro",
+    "rawText": "Day Night Sprint Summer Fall Winter | Wanted Eau de Parfum Azzaro | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 182,
+    "fullName": "Ralph's Club Parfum",
+    "slug": "ralph-s-club-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Ralph's Club Parfum | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 183,
+    "fullName": "Polo Blue Parfum",
+    "slug": "polo-blue-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Polo Blue Parfum | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 184,
+    "fullName": "Ralph Club New York",
+    "slug": "ralph-club-new-york",
+    "rawText": "Day Night Sprint Summer Fall Winter | Ralph Club New York | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 185,
+    "fullName": "Ralph's Club Elixir",
+    "slug": "ralph-s-club-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Ralph's Club Elixir | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 186,
+    "fullName": "Polo 67 Eau De Parfum",
+    "slug": "polo-67-eau-de-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Polo 67 Eau De Parfum | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 187,
+    "fullName": "Polo 67 Eau De Parfum Extreme",
+    "slug": "polo-67-eau-de-parfum-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Polo 67 Eau De Parfum Extreme | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 188,
+    "fullName": "Polo Red Eau De Parfum Extreme",
+    "slug": "polo-red-eau-de-parfum-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Polo Red Eau De Parfum Extreme | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 189,
+    "fullName": "Montblanc Explorer Extreme",
+    "slug": "montblanc-explorer-extreme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Montblanc Explorer Extreme | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 190,
+    "fullName": "Montblanc Legend Spirit",
+    "slug": "montblanc-legend-spirit",
+    "rawText": "Day Night Sprint Summer Fall Winter | Montblanc Legend Spirit | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 191,
+    "fullName": "Montblanc Legend Red",
+    "slug": "montblanc-legend-red",
+    "rawText": "Day Night Sprint Summer Fall Winter | Montblanc Legend Red | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 192,
+    "fullName": "Montblanc Legend Eau de Parfum",
+    "slug": "montblanc-legend-eau-de-parfum",
+    "rawText": "Day Night Sprint Summer Fall Winter | Montblanc Legend Eau de Parfum | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 193,
+    "fullName": "Coach Blue",
+    "slug": "coach-blue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coach Blue | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 194,
+    "fullName": "Safar Silver Louis Cardin",
+    "slug": "safar-silver-louis-cardin",
+    "rawText": "Day Night Sprint Summer Fall Winter | Safar Silver Louis Cardin | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 195,
+    "fullName": "Raees Vert Jo Milano Paris",
+    "slug": "raees-vert-jo-milano-paris",
+    "rawText": "Day Night Sprint Summer Fall Winter | Raees Vert Jo Milano Paris | Alternativa a PDM Layton valorado en $370.00 | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 196,
+    "fullName": "Roll it 2 Jo Millano Paris",
+    "slug": "roll-it-2-jo-millano-paris",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Roll it 2 Jo Millano Paris | Dupe de Vibrato Sospiro valorado en $380.00 | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 197,
+    "fullName": "Roll it 7 Jo Millano Paris",
+    "slug": "roll-it-7-jo-millano-paris",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Roll it 7 Jo Millano Paris | Dupe de Afternoon Swim de LV valorado en $380.00 dólares | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 198,
+    "fullName": "Fierte by French Avenue",
+    "slug": "fierte-by-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Fierte by French Avenue | Dupe de BabyCat de YSL valorado en $420.00 | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 199,
+    "fullName": "Notes Classics Fragrance World",
+    "slug": "notes-classics-fragrance-world",
+    "rawText": "Day Night Sprint Summer Fall Winter | Notes Classics Fragrance World | Dupe Cherry Punk Room 1015 en $190 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 200,
+    "fullName": "Amber Empire French Avenue",
+    "slug": "amber-empire-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Amber Empire French Avenue | Dupe de Clive Christian Blonde Amber en $489.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 201,
+    "fullName": "Royal Blend Sequoia French Avenue",
+    "slug": "royal-blend-sequoia-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Royal Blend Sequoia French Avenue | Dupe de Angels' Share Paradis Kylian en $325.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 202,
+    "fullName": "Vulcan Feu French Avenue",
+    "slug": "vulcan-feu-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Vulcan Feu French Avenue | $20.00 | $15.00 $10.00 | Dupe de God of Fire Stephane Humbert Lucas $250.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 203,
+    "fullName": "Vulcan Sable French Avenue",
+    "slug": "vulcan-sable-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Vulcan Sable French Avenue | Dupe de Sand Dance de Stephane Humbert Lucas $250.00 | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 204,
+    "fullName": "Vulcan Black Friday French Avenue",
+    "slug": "vulcan-black-friday-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Vulcan Black Friday French Avenue | Dupe Deified Tony Lommi Xerjoﬀ valor aproximado $280.00 | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 205,
+    "fullName": "Forbidden Fruit Aromatix X French Avenue",
+    "slug": "forbidden-fruit-aromatix-x-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Forbidden Fruit Aromatix X French Avenue | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 206,
+    "fullName": "Magnetiq Aromatix X French Avenue",
+    "slug": "magnetiq-aromatix-x-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Magnetiq Aromatix X French Avenue | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 207,
+    "fullName": "Sun Kissed Aromatix X French Avenue",
+    "slug": "sun-kissed-aromatix-x-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Sun Kissed Aromatix X French Avenue | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 208,
+    "fullName": "Frostbite Aromatix X French Avenue",
+    "slug": "frostbite-aromatix-x-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Frostbite Aromatix X French Avenue | Dupe de Ambassador Men Gisada valorado en $180.00 | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 209,
+    "fullName": "Royal Taboo Aromatix X French Avenue",
+    "slug": "royal-taboo-aromatix-x-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Royal Taboo Aromatix X French Avenue | Dupe de Creed Centaurus en $475.00 dólares | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 210,
+    "fullName": "Carnal Desire Aromatix X French Avenue",
+    "slug": "carnal-desire-aromatix-x-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Carnal Desire Aromatix X French Avenue | Dupe de Cuir InfraRouge Maison Crivelli valorado en $420.00 | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 211,
+    "fullName": "Liquid Brun French Avenue",
+    "slug": "liquid-brun-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Liquid Brun French Avenue | Dupe de Althair PMD valorado en $370.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 212,
+    "fullName": "Azzure Oud French Avenue",
+    "slug": "azzure-oud-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Azzure Oud French Avenue | Dupe Oud Maracujá Maison Crivelli valorado en $420.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 213,
+    "fullName": "Cocoa Morado French Avenue",
+    "slug": "cocoa-morado-french-avenue",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Cocoa Morado French Avenue | Dupe Oud Cadenza Maison Crivelli valorado en $420.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 214,
+    "fullName": "Aether Fragrance World",
+    "slug": "aether-fragrance-world",
+    "rawText": "Day Night Sprint Summer Fall Winter | Aether Fragrance World | Dupe de Greenley PMD valorado en $370.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 215,
+    "fullName": "Atlantis Fragrance World",
+    "slug": "atlantis-fragrance-world",
+    "rawText": "Day Night Sprint Summer Fall Winter | Atlantis Fragrance World | Dupe de Wavechild Room 1015 valorado en $180.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 216,
+    "fullName": "Chaos Fragrance World",
+    "slug": "chaos-fragrance-world",
+    "rawText": "Day Night Sprint Summer Fall Winter | Chaos Fragrance World | Dupe de Kirsch Headspace Headspace valorado en $280.00 | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 217,
+    "fullName": "Seasons Drift Riiffs Perfumes",
+    "slug": "seasons-drift-riiffs-perfumes",
+    "rawText": "Day Night Sprint Summer Fall Winter | Seasons Drift Riiffs Perfumes | Dupe de Bleu de Chanel L'Exclusif en $310.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 218,
+    "fullName": "Faris Al Arab MAISON ASRAR",
+    "slug": "faris-al-arab-maison-asrar",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Faris Al Arab MAISON ASRAR | Dupe de Clive Christian Blonde Amber en $489.00 | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 219,
+    "fullName": "Rayhaan Aquatica",
+    "slug": "rayhaan-aquatica",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rayhaan Aquatica | Dupe de Virgin Island Water en $475.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 220,
+    "fullName": "Rayhaan Terra",
+    "slug": "rayhaan-terra",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rayhaan Terra | Dupe de Amouage Outlands valorado en $355.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 221,
+    "fullName": "Rayhaan Crimson",
+    "slug": "rayhaan-crimson",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rayhaan Crimson | Dupe de Creed Centaurus en $475.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 222,
+    "fullName": "Rayhaan Obsidiam",
+    "slug": "rayhaan-obsidiam",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rayhaan Obsidiam | Dupe de Dior Homme Parfum 2025 en $185.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 223,
+    "fullName": "Nitro Elixir",
+    "slug": "nitro-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Nitro Elixir | Inspirado en MYSFL Absolu YSL EDP valorado en $210.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 224,
+    "fullName": "Nitro Red Intensely",
+    "slug": "nitro-red-intensely",
+    "rawText": "Day Night Sprint Summer Fall Winter | Nitro Red Intensely | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 225,
+    "fullName": "Nitro Red Gold",
+    "slug": "nitro-red-gold",
+    "rawText": "Day Night Sprint Summer Fall Winter | Nitro Red Gold | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 226,
+    "fullName": "Game of Spades Full House",
+    "slug": "game-of-spades-full-house",
+    "rawText": "Day Night Sprint Summer Fall Winter | Game of Spades Full House | Dupe de Imagination de LV valorado en $380.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 227,
+    "fullName": "Game of Space High Roller",
+    "slug": "game-of-space-high-roller",
+    "rawText": "Day Night Sprint Summer Fall Winter | Game of Space High Roller | Dupe de Creed Aventus Absolu valorado en $475.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 228,
+    "fullName": "Game of Space Opal",
+    "slug": "game-of-space-opal",
+    "rawText": "Day Night Sprint Summer Fall Winter | Game of Space Opal | Dupe de Lovers de LV valorado en $380.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 229,
+    "fullName": "Game of Space Wildcard",
+    "slug": "game-of-space-wildcard",
+    "rawText": "Day Night Sprint Summer Fall Winter | Game of Space Wildcard | Dupe de Bond No 9 Lafayette valorado en $375.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 230,
+    "fullName": "Game of Space Bonus",
+    "slug": "game-of-space-bonus",
+    "rawText": "Day Night Sprint Summer Fall Winter | Game of Space Bonus | Dupe de Pacific Chill de LV valorado en $380.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 231,
+    "fullName": "Ágäpe Ęlixir",
+    "slug": "agape-elixir",
+    "rawText": "Day Night Sprint Summer Fall Winter | Ágäpe Ęlixir | Inspiracion mas fresca y citrica de One Million Elixir valorado en $130.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 232,
+    "fullName": "Musamam Black Intense Lattafa",
+    "slug": "musamam-black-intense-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Musamam Black Intense Lattafa | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 233,
+    "fullName": "Asad Lattafa",
+    "slug": "asad-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Asad Lattafa | $15.00 | $10.00 $6.00 | Dupe de Dior Sauvage Elixir valorado en $220.00 dólares",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "6.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 234,
+    "fullName": "Asad Bourbon Lattafa",
+    "slug": "asad-bourbon-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Asad Bourbon Lattafa | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 235,
+    "fullName": "Asad Elixir Lattafa",
+    "slug": "asad-elixir-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Asad Elixir Lattafa | Dupe de Hugo Boss Bottlel Absolu valorado en $160.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 236,
+    "fullName": "Fakhar Platin Lattafa",
+    "slug": "fakhar-platin-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Fakhar Platin Lattafa | Dupe de Y YSL Elixir valorado en $175.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 237,
+    "fullName": "Lataﬀa Sherif",
+    "slug": "lataffa-sherif",
+    "rawText": "Day Night Sprint Summer Fall Winter | Lataﬀa Sherif | Dupe de Greenley PMD valorado en $370.00 dólares $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 238,
+    "fullName": "Maahir Legacy Lattafa",
+    "slug": "maahir-legacy-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Maahir Legacy Lattafa | $15.00 | $10.00 $7.00 | Dupe PDM Percival valorado en $370.00 dólares",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 239,
+    "fullName": "Taureau De Combat Lattafa",
+    "slug": "taureau-de-combat-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Taureau De Combat Lattafa | Dupe de Creed Centaurus en $475.00 dólares | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 240,
+    "fullName": "Art Of Universe Lattafa",
+    "slug": "art-of-universe-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Art Of Universe Lattafa | Dupe Blue Talisman de Ex Nihilo valorado en $350.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 241,
+    "fullName": "Art of Wood Lattafa",
+    "slug": "art-of-wood-lattafa",
+    "rawText": "Art of Wood Lattafa Day Night Sprint Summer Fall Winter | Alternativa a PDM Perseus valorado en $370.00 dólares | $15.00 | $11.00 $8.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "11.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "8.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 242,
+    "fullName": "Vintage Radio de Lattafa",
+    "slug": "vintage-radio-de-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Vintage Radio de Lattafa | Dupe de InitionParagon valorado en $350.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 243,
+    "fullName": "La Collection d'antiquités 1505 de Lattafa",
+    "slug": "la-collection-d-antiquites-1505-de-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | La Collection d'antiquités 1505 de Lattafa | Dupe de Tom Ford Cherry Smoke valorado en $450.00 | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 244,
+    "fullName": "Eternal Vanille de Lattafa",
+    "slug": "eternal-vanille-de-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Eternal Vanille de Lattafa | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 245,
+    "fullName": "Mishlah de Lattafa",
+    "slug": "mishlah-de-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Mishlah de Lattafa | Dupe de Metallic Musk de V&R valorado en $140.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 246,
+    "fullName": "Lataﬀa Pisa",
+    "slug": "lataffa-pisa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Lataﬀa Pisa | Dupe de Afternoon Swim de LV valorado en $380.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 247,
+    "fullName": "His Confession Lattafa",
+    "slug": "his-confession-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | His Confession Lattafa | Dupe de Gentleman EDP Givenchy valorado en $120.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 248,
+    "fullName": "Shaheen Gold Lattafa",
+    "slug": "shaheen-gold-lattafa",
+    "rawText": "Day Night Sprint Summer Fall Winter | Shaheen Gold Lattafa | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 249,
+    "fullName": "Amber Oud Gold Edition",
+    "slug": "amber-oud-gold-edition",
+    "rawText": "Day Night Sprint Summer Fall Winter | Amber Oud Gold Edition | Dupe de Erba Pura de Xerjoﬀ valorado en $270.00 | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 250,
+    "fullName": "Coconut Lagoon PARIS CORNER",
+    "slug": "coconut-lagoon-paris-corner",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coconut Lagoon PARIS CORNER | Inspirado en Virgin Island Water en $475.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 251,
+    "fullName": "Supremacy Collector's EditionAfnan",
+    "slug": "supremacy-collector-s-editionafnan",
+    "rawText": "Day Night Sprint Summer Fall Winter | Supremacy Collector's EditionAfnan | Alternativa a Creed Aventus Absolu valorado en $475.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 252,
+    "fullName": "Lynked Freedom de Afnan",
+    "slug": "lynked-freedom-de-afnan",
+    "rawText": "Day Night Sprint Summer Fall Winter | Lynked Freedom de Afnan | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 253,
+    "fullName": "Rare Reef Afnan",
+    "slug": "rare-reef-afnan",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rare Reef Afnan | Alternativa a Pacific Chill de LV valorado en $380.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 254,
+    "fullName": "9am Dive Afnan",
+    "slug": "9am-dive-afnan",
+    "rawText": "Day Night Sprint Summer Fall Winter | 9am Dive Afnan | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 255,
+    "fullName": "9pm Afnan",
+    "slug": "9pm-afnan",
+    "rawText": "Day Night Sprint Summer Fall Winter | 9pm Afnan | Dupe de Ultra Male JPG valorado en $150.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 256,
+    "fullName": "9 PM Rebel Afnan",
+    "slug": "9-pm-rebel-afnan",
+    "rawText": "Day Night Sprint Summer Fall Winter | 9 PM Rebel Afnan | $15.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 257,
+    "fullName": "9 PM Night Out Afnan",
+    "slug": "9-pm-night-out-afnan",
+    "rawText": "Day Night Sprint Summer Fall Winter | 9 PM Night Out Afnan | Le Male Elixir Albsolu JPG valorado en $150.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 258,
+    "fullName": "Daiman Eclipse Zimaya",
+    "slug": "daiman-eclipse-zimaya",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Daiman Eclipse Zimaya | Alternativa a Acqua Di Gio Elixir valorado en $199.00 dólares | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 259,
+    "fullName": "Kaaf Ahmed Al Maghribi",
+    "slug": "kaaf-ahmed-al-maghribi",
+    "rawText": "Day Night Sprint Summer Fall Winter | Kaaf Ahmed Al Maghribi | $15.00 | $10.00 $7.00 | Dupe PDM Percival valorado en $370.00 dólares",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 260,
+    "fullName": "Hawas Ice Rasasi",
+    "slug": "hawas-ice-rasasi",
+    "rawText": "Day Night Sprint Summer Fall Winter | Hawas Ice Rasasi | $15.00 | $10.00 $8.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "8.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 261,
+    "fullName": "Hawas Black Rasasi",
+    "slug": "hawas-black-rasasi",
+    "rawText": "Day Night Sprint Summer Fall Winter | Hawas Black Rasasi | Dupe de Nishane Hacivat valorado en $250.00 | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 262,
+    "fullName": "Hawas Fire Rasasi",
+    "slug": "hawas-fire-rasasi",
+    "rawText": "Day Night Sprint Summer Fall Winter | Hawas Fire Rasasi | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 263,
+    "fullName": "Hawas Malibu Rasasi",
+    "slug": "hawas-malibu-rasasi",
+    "rawText": "Day Night Sprint Summer Fall Winter | Hawas Malibu Rasasi | Alternativa de Le Beau Le Parfum JPG valorado en $150.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 264,
+    "fullName": "Hawas Verde Rasasi",
+    "slug": "hawas-verde-rasasi",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Hawas Verde Rasasi | Dupe de Torino 21 Xerjoﬀ valorado en $250.00 | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 265,
+    "fullName": "Hawas Tropical Rasasi",
+    "slug": "hawas-tropical-rasasi",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Hawas Tropical Rasasi | Alternativa de Le Beau Paradice Garden JPG valorado en $150.00 dólares | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 266,
+    "fullName": "Hawas Atlantis Rasasi",
+    "slug": "hawas-atlantis-rasasi",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Hawas Atlantis Rasasi | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 267,
+    "fullName": "Onyx Gold Khadlaj",
+    "slug": "onyx-gold-khadlaj",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Onyx Gold Khadlaj | Dupe de Clive Christian Blonde Amber en $489.00 | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 268,
+    "fullName": "Onyx Silver Khadlaj",
+    "slug": "onyx-silver-khadlaj",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Onyx Silver Khadlaj | Alternativa a PDM Castley valorado en $370.00 | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 269,
+    "fullName": "Rome Pour Homme",
+    "slug": "rome-pour-homme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rome Pour Homme | Dupe de Valentino BIR EDT de valorado en $165.00 | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 270,
+    "fullName": "Rome Imagine Pour Homme",
+    "slug": "rome-imagine-pour-homme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rome Imagine Pour Homme | Alternativa a Imagination de LV valorado en $380.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 271,
+    "fullName": "Rome Extradose Pour Homme",
+    "slug": "rome-extradose-pour-homme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Rome Extradose Pour Homme | Alternativa al Valentino Extradose valorado en $190.00 dólares | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 272,
+    "fullName": "ANARCHY NO PAIN NO GAIN",
+    "slug": "anarchy-no-pain-no-gain",
+    "rawText": "Day Night Sprint Summer Fall Winter | ANARCHY NO PAIN NO GAIN | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 273,
+    "fullName": "King of Kings Royal Blue",
+    "slug": "king-of-kings-royal-blue",
+    "rawText": "Day Night Sprint Summer Fall Winter | King of Kings Royal Blue | Dupe de JPG Paradise Garden valorado en $130.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 274,
+    "fullName": "King of Kings Royal Island",
+    "slug": "king-of-kings-royal-island",
+    "rawText": "Day Night Sprint Summer Fall Winter | King of Kings Royal Island | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 275,
+    "fullName": "King of Kings Nebula",
+    "slug": "king-of-kings-nebula",
+    "rawText": "Day Night Sprint Summer Fall Winter | King of Kings Nebula | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 276,
+    "fullName": "King of Kings Private Blend",
+    "slug": "king-of-kings-private-blend",
+    "rawText": "Day Night Sprint Summer Fall Winter | King of Kings Private Blend | Dupe de Roja Elysium valorado en $325.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 277,
+    "fullName": "King of Kings Royal Amber",
+    "slug": "king-of-kings-royal-amber",
+    "rawText": "Day Night Sprint Summer Fall Winter | King of Kings Royal Amber | Dupe de Erba Gold valorado en $270.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 278,
+    "fullName": "King of Kings Chapter I",
+    "slug": "king-of-kings-chapter-i",
+    "rawText": "Day Night Sprint Summer Fall Winter | King of Kings Chapter I | Dupe de Sumer Hammer valorado en $230.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 279,
+    "fullName": "King of Kings Chapter II",
+    "slug": "king-of-kings-chapter-ii",
+    "rawText": "Day Night Sprint Summer Fall Winter | King of Kings Chapter II | Dupe de XERJOFF Naxos valorado en $380.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 280,
+    "fullName": "Kohl Opulence Arabiyat Prestige",
+    "slug": "kohl-opulence-arabiyat-prestige",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Kohl Opulence Arabiyat Prestige | Inspiracion Blue Talisman de Ex Nihilo valorado en $350.00 | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 281,
+    "fullName": "Marwa Arabiyat Prestige",
+    "slug": "marwa-arabiyat-prestige",
+    "rawText": "Day Night Sprint Summer Fall Winter | Marwa Arabiyat Prestige | Dupe de Imagination de LV valorado en $380.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 282,
+    "fullName": "MarMahd Al Dhahab Arabiyat Prestige",
+    "slug": "marmahd-al-dhahab-arabiyat-prestige",
+    "rawText": "Day Night Sprint Summer Fall Winter | MarMahd Al Dhahab Arabiyat Prestige | Dupe de Drunk Lovers BORNTOSTANDOUT valorado en $380.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 283,
+    "fullName": "Al Noor Arabiyat Prestige",
+    "slug": "al-noor-arabiyat-prestige",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Al Noor Arabiyat Prestige | Dupe de Gris Charnel Extrait BDK valorado en $380.00 dólares | $20.00 | $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 284,
+    "fullName": "Eter Arabian Sky Armaf",
+    "slug": "eter-arabian-sky-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Eter Arabian Sky Armaf | $20.00 $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 285,
+    "fullName": "Connoisseur Man Armaf",
+    "slug": "connoisseur-man-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Connoisseur Man Armaf | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 286,
+    "fullName": "Ombre d'Or Armaf",
+    "slug": "ombre-d-or-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter Coming Soon | Ombre d'Or Armaf | $20.00 $15.00 $10.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 287,
+    "fullName": "Odyssey Mega Man",
+    "slug": "odyssey-mega-man",
+    "rawText": "Day Night Sprint Summer Fall Winter | Odyssey Mega Man | Dupe de Y YSL EDP valorado en $175.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 288,
+    "fullName": "Odyssey Homme",
+    "slug": "odyssey-homme",
+    "rawText": "Day Night Sprint Summer Fall Winter | Odyssey Homme | Tom Ford Noir Extreme valorado en $350.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 289,
+    "fullName": "Odyssey Mandarin Sky",
+    "slug": "odyssey-mandarin-sky",
+    "rawText": "Day Night Sprint Summer Fall Winter | Odyssey Mandarin Sky | Dupe de Scandal JPG valorado en $125.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 290,
+    "fullName": "Club de Nuit Precieux I Armaf",
+    "slug": "club-de-nuit-precieux-i-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Club de Nuit Precieux I Armaf | Alternativa a Creed Aventus Absolu valorado en $475.00 | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 291,
+    "fullName": "Club de Nuit Bling Armaf",
+    "slug": "club-de-nuit-bling-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Club de Nuit Bling Armaf | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 292,
+    "fullName": "Club de Nuit Urban Elixir Armaf",
+    "slug": "club-de-nuit-urban-elixir-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Coming Soon | Club de Nuit Urban Elixir Armaf | Mescla de Sauvage y Aventus | $15.00 | $10.00 $7.00",
+    "status": "COMING_SOON",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 293,
+    "fullName": "Club de Nuit Iconic Armaf",
+    "slug": "club-de-nuit-iconic-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Club de Nuit Iconic Armaf | Bleu de Chanel EDP valorado en $175.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 294,
+    "fullName": "Club de Nuit Sillage Armaf",
+    "slug": "club-de-nuit-sillage-armaf",
+    "rawText": "Day Night Sprint Summer Fall Winter | Club de Nuit Sillage Armaf | Creed Silver Mountain Water valorado en $420.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 295,
+    "fullName": "Club de Nuit Milestone",
+    "slug": "club-de-nuit-milestone",
+    "rawText": "Day Night Sprint Summer Fall Winter | Club de Nuit Milestone | Creed Millesime Imperial valorado en $420.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 296,
+    "fullName": "Club de Nuit Untold",
+    "slug": "club-de-nuit-untold",
+    "rawText": "Day Night Sprint Summer Fall Winter | Club de Nuit Untold | Dupe de Baccarat Rouge 540 valorado en $380.00 dólares $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 297,
+    "fullName": "Jean Lowe Vipe Maison Alhambra",
+    "slug": "jean-lowe-vipe-maison-alhambra",
+    "rawText": "Day Night Sprint Summer Fall Winter | Jean Lowe Vipe Maison Alhambra | Dupe de Pacific Chill de LV valorado en $380.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 298,
+    "fullName": "Jean Lowe Immortel",
+    "slug": "jean-lowe-immortel",
+    "rawText": "Day Night Sprint Summer Fall Winter | Jean Lowe Immortel | Dupe de L’Immensité de LV valorado en $380.00 dólares | $15.00 | $10.00 $7.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "7.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 299,
+    "fullName": "Double Bleu Bharara",
+    "slug": "double-bleu-bharara",
+    "rawText": "Day Night Sprint Summer Fall Winter | Double Bleu Bharara | $20.00 | $15.00 $10.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "20.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "15.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "10.00",
+        "sortOrder": 3
+      }
+    ]
+  },
+  {
+    "sourcePage": 300,
+    "fullName": "Stallion 53",
+    "slug": "stallion-53",
+    "rawText": "Day Night Sprint Summer Fall Winter | Stallion 53 | Santal 33 valorado en $350.00 dólares | $15.00 | $10.00 $8.00",
+    "status": "ACTIVE",
+    "sizes": [
+      {
+        "sizeMl": 10,
+        "price": "15.00",
+        "sortOrder": 1
+      },
+      {
+        "sizeMl": 5,
+        "price": "10.00",
+        "sortOrder": 2
+      },
+      {
+        "sizeMl": 3,
+        "price": "8.00",
+        "sortOrder": 3
+      }
+    ]
+  }
+]
