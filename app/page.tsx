@@ -70,7 +70,7 @@ export default async function Page({ searchParams }: PageProps) {
 
   return (
     <main className="bg-[var(--color-ivory)] text-[var(--color-ink)]">
-      <section className="relative overflow-hidden bg-[linear-gradient(145deg,#2c0b43_0%,#4d2171_45%,#f7f0e7_100%)]">
+      <section className="relative overflow-hidden bg-[linear-gradient(145deg,#2c0b43_0%,#4d2171_42%,#250835_100%)]">
         <Image
           src={heroImage}
           alt=""
@@ -80,10 +80,9 @@ export default async function Page({ searchParams }: PageProps) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,6,33,0.6)_0%,rgba(20,6,33,0.76)_45%,rgba(20,6,33,0.86)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(241,213,148,0.14),transparent_32%),linear-gradient(145deg,rgba(44,11,67,0.9)_0%,rgba(77,33,113,0.74)_45%,rgba(247,240,231,0.08)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(241,213,148,0.14),transparent_32%),linear-gradient(145deg,rgba(44,11,67,0.9)_0%,rgba(77,33,113,0.74)_45%,rgba(37,8,53,0.22)_100%)]" />
         <div className="hero-aura absolute left-[-7rem] top-[-4rem] h-72 w-72 rounded-full" />
         <div className="hero-aura absolute bottom-[-8rem] right-[-4rem] h-96 w-96 rounded-full [animation-delay:1.3s]" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(180deg,transparent_0%,rgba(247,240,231,0.9)_100%)]" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-8 text-center sm:px-6 sm:py-12 lg:px-10 lg:py-16">
           <nav className="fade-in-up flex w-full max-w-5xl flex-col items-center gap-6 border-b border-white/12 pb-8 sm:pb-10">

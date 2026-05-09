@@ -165,11 +165,12 @@ export function CatalogBrowser({
                       aria-hidden="true"
                       className="catalog-card-bottle-halo absolute inset-[10%] rounded-full"
                     />
-                    <div className="catalog-card-bottle-stage absolute inset-[16%] sm:inset-[15%]">
+                    <div className="catalog-card-bottle-stage absolute inset-[15%] sm:inset-[16%]">
                       <Image
                         src={item.bottleAsset.src}
                         alt={`Botella de ${item.fullName}`}
-                        fill
+                        width={640}
+                        height={640}
                         unoptimized
                         className={`catalog-card-bottle-image ${
                           isCustomBottle ? "catalog-card-bottle-image-custom" : ""

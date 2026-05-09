@@ -121,21 +121,24 @@ export default async function CatalogDetailPage({
           <div className="grid gap-4 lg:grid-cols-[minmax(16rem,0.84fr)_minmax(0,1.16fr)] lg:items-start lg:gap-5">
             <div className="fade-in-up space-y-4 sm:grid sm:items-start sm:gap-4 sm:[grid-template-columns:minmax(0,0.92fr)_minmax(0,1.08fr)] lg:block lg:space-y-4">
               <div className="catalog-bottle-frame relative overflow-hidden rounded-[1.35rem] border border-white/10 sm:rounded-[1.6rem]">
-                <Image
-                  src={bottleAsset.src}
-                  alt={`Botella de ${item.fullName}`}
-                  fill
-                  unoptimized
-                  priority
-                  className={`catalog-bottle-art ${isCustomBottle ? "catalog-bottle-art-custom" : ""}`}
-                  style={
-                    isCustomBottle
-                      ? undefined
-                      : {
-                          transform: `translate(calc(${item.bottleTranslateX} + 24%), ${item.bottleTranslateY}) scale(${item.bottleScale})`,
-                        }
-                  }
-                />
+                <div className="catalog-bottle-stage absolute inset-[8%] sm:inset-[9%]">
+                  <Image
+                    src={bottleAsset.src}
+                    alt={`Botella de ${item.fullName}`}
+                    width={900}
+                    height={1080}
+                    unoptimized
+                    priority
+                    className={`catalog-bottle-art ${isCustomBottle ? "catalog-bottle-art-custom" : ""}`}
+                    style={
+                      isCustomBottle
+                        ? undefined
+                        : {
+                            transform: `translate(calc(${item.bottleTranslateX} + 24%), ${item.bottleTranslateY}) scale(${item.bottleScale})`,
+                          }
+                    }
+                  />
+                </div>
               </div>
 
               <div className="panel-dark rounded-[1.35rem] p-3.5 text-[var(--color-cream)] sm:rounded-[1.6rem] sm:p-4">

@@ -1,4 +1,5 @@
 import Form from "next/form";
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -272,10 +273,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
           ) : (
             <>
               <details
+                className="expandable-panel panel-card overflow-hidden rounded-[1.75rem]"
                 open={normalizedFocus === "create"}
-                className="panel-card overflow-hidden rounded-[1.75rem]"
               >
-                <summary className="cursor-pointer list-none px-5 py-5 sm:px-6">
+                <summary className="expandable-panel-summary cursor-pointer list-none px-5 py-5 sm:px-6">
                   <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                     <div>
                       <p className="section-label">Nuevo cologne</p>
@@ -283,6 +284,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                         Agregar fragancia
                       </h2>
                     </div>
+                    <ExpandIndicator label="Toca o haz click para abrir" />
                   </div>
                 </summary>
 
@@ -373,42 +375,49 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                     return (
                       <details
                         key={item.id}
+                        className="expandable-panel panel-card overflow-hidden rounded-[1.75rem]"
                         open={normalizedFocus === item.slug}
-                        className="panel-card overflow-hidden rounded-[1.75rem]"
                       >
-                        <summary className="cursor-pointer list-none px-5 py-5 sm:px-6">
+                        <summary className="expandable-panel-summary cursor-pointer list-none px-5 py-5 sm:px-6">
                           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                            <div className="min-w-0">
-                              <div className="flex flex-wrap gap-2.5">
-                                <span className="detail-chip w-fit">
-                                  {item.status === "ACTIVE"
-                                    ? "Activo"
-                                    : "Coming soon"}
-                                </span>
-                                <span className="detail-chip w-fit bg-white">
-                                  /{item.slug}
-                                </span>
-                              </div>
+                            <div className="flex min-w-0 items-start gap-4">
+                              <BottleSnapshot asset={item.bottleAsset} name={item.fullName} />
 
-                              <h3 className="mt-4 font-display text-3xl text-[var(--color-plum-900)]">
-                                {item.fullName}
-                              </h3>
-                              <p className="mt-2 text-sm leading-7 text-[var(--color-ink-soft)]">
-                                Orden {item.sourcePage} · {item.sizes.length}{" "}
-                                tamaño
-                                {item.sizes.length === 1 ? "" : "s"} ·{" "}
-                                {item.accords.length} accord
-                                {item.accords.length === 1 ? "" : "s"} ·{" "}
-                                {noteCount} note
-                                {noteCount === 1 ? "" : "s"} · imagen{" "}
-                                {item.bottleAsset.kind === "custom"
-                                  ? "personalizada"
-                                  : "PDF"}
-                              </p>
+                              <div className="min-w-0">
+                                <div className="flex flex-wrap gap-2.5">
+                                  <span className="detail-chip w-fit">
+                                    {item.status === "ACTIVE"
+                                      ? "Activo"
+                                      : "Coming soon"}
+                                  </span>
+                                  <span className="detail-chip w-fit bg-white">
+                                    /{item.slug}
+                                  </span>
+                                </div>
+
+                                <h3 className="mt-4 font-display text-3xl text-[var(--color-plum-900)]">
+                                  {item.fullName}
+                                </h3>
+                                <p className="mt-2 text-sm leading-7 text-[var(--color-ink-soft)]">
+                                  Orden {item.sourcePage} · {item.sizes.length}{" "}
+                                  tamaño
+                                  {item.sizes.length === 1 ? "" : "s"} ·{" "}
+                                  {item.accords.length} accord
+                                  {item.accords.length === 1 ? "" : "s"} ·{" "}
+                                  {noteCount} note
+                                  {noteCount === 1 ? "" : "s"} · imagen{" "}
+                                  {item.bottleAsset.kind === "custom"
+                                    ? "personalizada"
+                                    : "PDF"}
+                                </p>
+                              </div>
                             </div>
 
-                            <div className="max-w-2xl text-sm leading-7 text-[var(--color-ink-soft)] lg:text-right">
-                              {formatPriceSummary(item)}
+                            <div className="flex flex-col gap-4 lg:items-end">
+                              <div className="max-w-2xl text-sm leading-7 text-[var(--color-ink-soft)] lg:text-right">
+                                {formatPriceSummary(item)}
+                              </div>
+                              <ExpandIndicator label="Toca o haz click para ver detalles" />
                             </div>
                           </div>
                         </summary>
@@ -518,6 +527,58 @@ function MessagePanel({
   return (
     <div className="rounded-[1.6rem] border border-[rgba(220,176,103,0.32)] bg-[rgba(220,176,103,0.1)] px-5 py-4 text-sm leading-7 text-[var(--color-plum-900)]">
       {children}
+    </div>
+  );
+}
+
+function ExpandIndicator({ label }: { label: string }) {
+  return (
+    <div className="pointer-events-none inline-flex items-center gap-3 self-start rounded-full border border-[rgba(82,33,117,0.12)] bg-white/88 px-3 py-2 text-left text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-plum-900)] shadow-[0_12px_30px_rgba(61,20,95,0.08)] lg:self-auto">
+      <span>{label}</span>
+      <span
+        aria-hidden="true"
+        className="expandable-panel-chevron inline-flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(220,176,103,0.18)] text-[var(--color-plum-900)]"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-4 w-4"
+        >
+          <path d="m9 6 6 6-6 6" />
+        </svg>
+      </span>
+    </div>
+  );
+}
+
+function BottleSnapshot({
+  asset,
+  name,
+}: {
+  asset: BottleImageAsset;
+  name: string;
+}) {
+  return (
+    <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-[1.35rem] border border-[rgba(220,176,103,0.24)] bg-[linear-gradient(180deg,rgba(255,252,248,0.98)_0%,rgba(246,235,222,0.96)_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.82),0_18px_36px_rgba(61,20,95,0.09)] sm:h-28 sm:w-24">
+      <div
+        aria-hidden="true"
+        className="absolute inset-[12%] rounded-[1rem] bg-[radial-gradient(circle_at_40%_24%,rgba(255,255,255,0.92),rgba(255,255,255,0.12)_58%,transparent_78%)]"
+      />
+      <Image
+        src={asset.src}
+        alt={`Botella de ${name}`}
+        fill
+        unoptimized
+        className={`relative object-contain p-2.5 ${
+          asset.kind === "custom"
+            ? "object-center"
+            : "object-left [transform:translateX(10%)_scale(1.18)]"
+        }`}
+      />
     </div>
   );
 }

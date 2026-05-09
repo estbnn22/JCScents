@@ -15,7 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="h-full antialiased">
+    <html
+      lang="es"
+      className="h-full antialiased"
+      data-scroll-behavior="smooth"
+    >
       <body className="min-h-screen">
         <div className="flex min-h-screen flex-col">
           <div className="flex-1">{children}</div>
