@@ -1,17 +1,18 @@
-import Form from "next/form";
 import Image from "next/image";
 import Link from "next/link";
 
 import {
   CatalogBrowser,
-  ITEMS_PER_PAGE,
-  type StatusFilter,
 } from "@/app/_components/catalog-browser";
+import { type StatusFilter } from "@/app/_components/catalog-browser-config";
+import { CatalogControlsProvider } from "@/app/_components/catalog-controls-provider";
+import { CatalogHeroSearchForm } from "@/app/_components/catalog-hero-search-form";
 import { MobileHeroNav } from "@/app/_components/mobile-hero-nav";
 import { resolveBottleImageAsset } from "@/lib/catalog-bottle";
 import {
   type CatalogType,
   defaultCatalogType,
+  getCatalogLabel,
   parseCatalogType,
 } from "@/lib/catalog-config";
 import { buildCatalogCollectionHref } from "@/lib/catalog-links";
@@ -37,26 +38,9 @@ export default async function Page({ searchParams }: PageProps) {
   const { items } = await loadCatalogItems(selectedCatalog);
   const currentQuery = normalizeSearchParam(q).trim();
   const currentStatus = normalizeStatusFilter(normalizeSearchParam(status));
-  const filteredItems = items.filter((item) => {
-    const matchesQuery =
-      currentQuery.length === 0 ||
-      item.fullName.toLowerCase().includes(currentQuery.toLowerCase());
-    const matchesStatus = currentStatus === "all" || item.status === currentStatus;
-
-    return matchesQuery && matchesStatus;
-  });
-  const totalFilteredItems = filteredItems.length;
-  const totalPages = Math.max(1, Math.ceil(totalFilteredItems / ITEMS_PER_PAGE));
-  const currentPage = Math.min(
-    parsePositiveInteger(normalizeSearchParam(page)) ?? 1,
-    totalPages,
-  );
-  const paginatedItems = filteredItems.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE,
-  );
+  const currentPage = parsePositiveInteger(normalizeSearchParam(page)) ?? 1;
   const itemsWithBottleAssets = await Promise.all(
-    paginatedItems.map(async (item) => ({
+    items.map(async (item) => ({
       ...item,
       bottleAsset: await resolveBottleImageAsset(
         item.catalog,
@@ -83,6 +67,13 @@ export default async function Page({ searchParams }: PageProps) {
 
   return (
     <main className="bg-[var(--color-ivory)] text-[var(--color-ink)]">
+      <CatalogControlsProvider
+        catalog={selectedCatalog}
+        initialPage={currentPage}
+        initialQuery={currentQuery}
+        initialStatus={currentStatus}
+        items={itemsWithBottleAssets}
+      >
       <section className="relative overflow-hidden bg-[linear-gradient(145deg,#2c0b43_0%,#4d2171_42%,#250835_100%)]">
         <Image
           src={heroImage}
@@ -99,11 +90,7 @@ export default async function Page({ searchParams }: PageProps) {
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-8 text-center sm:px-6 sm:py-12 lg:px-10 lg:py-16">
           <div className="fade-in-up flex w-full max-w-6xl flex-col gap-6 border-b border-white/12 pb-8 text-left sm:pb-10">
-            <MobileHeroNav
-              currentQuery={currentQuery}
-              currentStatus={currentStatus}
-              selectedCatalog={selectedCatalog}
-            />
+            <MobileHeroNav selectedCatalog={selectedCatalog} />
 
             <nav className="hidden flex-col gap-6 sm:flex">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
@@ -119,11 +106,7 @@ export default async function Page({ searchParams }: PageProps) {
                 <div className="w-full max-w-3xl rounded-[1.9rem] border border-white/12 bg-white/8 p-4 shadow-[0_22px_60px_rgba(20,6,33,0.22)] backdrop-blur-[8px] sm:p-5">
                   <div className="flex flex-col gap-4">
                     <CatalogToggleLinks selectedCatalog={selectedCatalog} />
-                    <CatalogSearchForm
-                      currentQuery={currentQuery}
-                      currentStatus={currentStatus}
-                      selectedCatalog={selectedCatalog}
-                    />
+                    <CatalogHeroSearchForm />
                   </div>
                 </div>
               </div>
@@ -202,26 +185,13 @@ export default async function Page({ searchParams }: PageProps) {
         </div>
 
         <div className="mt-8 sm:mt-10">
-          <CatalogBrowser
-            catalog={selectedCatalog}
-            items={itemsWithBottleAssets}
-            currentPage={currentPage}
-            query={currentQuery}
-            status={currentStatus}
-            totalPages={totalPages}
-            totalVisibleItems={totalFilteredItems}
-          />
+          <CatalogBrowser />
         </div>
       </section>
+      </CatalogControlsProvider>
     </main>
   );
 }
-
-type HeroNavProps = {
-  currentQuery: string;
-  currentStatus: StatusFilter;
-  selectedCatalog: CatalogType;
-};
 
 function CatalogToggleLinks({
   selectedCatalog,
@@ -239,8 +209,8 @@ function CatalogToggleLinks({
       }
     >
       {([
-        { value: "MEN", label: "Men Catalog" },
-        { value: "WOMEN", label: "Women Catalog" },
+        { value: "MEN" },
+        { value: "WOMEN" },
       ] as const).map((option) => {
         const isActive = option.value === selectedCatalog;
 
@@ -260,53 +230,11 @@ function CatalogToggleLinks({
                 : "border-white/14 bg-white/7 text-white hover:-translate-y-0.5 hover:border-[var(--color-gold-soft)] hover:text-[var(--color-gold-soft)]"
             }`}
           >
-            {option.label}
+            {getCatalogLabel(option.value)}
           </Link>
         );
       })}
     </div>
-  );
-}
-
-function CatalogSearchForm({
-  currentQuery,
-  currentStatus,
-  selectedCatalog,
-  mobile = false,
-}: HeroNavProps & {
-  mobile?: boolean;
-}) {
-  return (
-    <Form
-      action="/#catalogo"
-      scroll={false}
-      className={`flex flex-col gap-3 ${mobile ? "" : "sm:flex-row sm:items-center"}`}
-    >
-      {selectedCatalog !== defaultCatalogType ? (
-        <input type="hidden" name="catalog" value={selectedCatalog} />
-      ) : null}
-      {currentStatus !== "all" ? (
-        <input type="hidden" name="status" value={currentStatus} />
-      ) : null}
-      <label className="flex-1 rounded-full border border-white/12 bg-white/9 px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-        <span className="sr-only">Buscar perfumes o colognes</span>
-        <input
-          type="search"
-          name="q"
-          defaultValue={currentQuery}
-          placeholder="Buscar perfumes, colognes o marcas..."
-          className="w-full border-0 bg-transparent text-sm text-white outline-none placeholder:text-white/52"
-        />
-      </label>
-      <button
-        type="submit"
-        className={`inline-flex min-h-[3.25rem] items-center justify-center rounded-full bg-[var(--color-gold)] px-6 py-3 text-sm font-semibold text-[var(--color-plum-950)] shadow-[0_14px_32px_rgba(20,6,33,0.22)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-soft)] ${
-          mobile ? "w-full" : ""
-        }`}
-      >
-        Search
-      </button>
-    </Form>
   );
 }
 

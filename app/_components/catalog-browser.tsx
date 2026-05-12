@@ -1,19 +1,20 @@
-import Form from "next/form";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
-import type { BottleImageAsset } from "@/lib/catalog-bottle";
-import type { CatalogType } from "@/lib/catalog-config";
+import { CatalogLiveSearch } from "@/app/_components/catalog-live-search";
+import {
+  ITEMS_PER_PAGE,
+  type StatusFilter,
+} from "@/app/_components/catalog-browser-config";
+import {
+  useCatalogControls,
+} from "@/app/_components/catalog-controls-provider";
 import {
   buildCatalogCollectionHref,
   buildCatalogItemHref,
 } from "@/lib/catalog-links";
-import type { CatalogItem } from "@/lib/catalog";
-
-export type StatusFilter = "all" | "ACTIVE" | "COMING_SOON";
-type CatalogBrowserItem = CatalogItem & {
-  bottleAsset: BottleImageAsset;
-};
 type PageToken = number | "ellipsis";
 
 const currencyFormatter = new Intl.NumberFormat("en-US", {
@@ -29,8 +30,6 @@ const statusFilters: Array<{
   { value: "ACTIVE", label: "Disponibles" },
   { value: "COMING_SOON", label: "Coming soon" },
 ];
-
-export const ITEMS_PER_PAGE = 12;
 
 function getPaginationTokens(
   currentPage: number,
@@ -59,23 +58,19 @@ function getPaginationTokens(
   ];
 }
 
-export function CatalogBrowser({
-  catalog,
-  items,
-  currentPage,
-  query,
-  status,
-  totalPages,
-  totalVisibleItems,
-}: {
-  catalog: CatalogType;
-  items: CatalogBrowserItem[];
-  currentPage: number;
-  query: string;
-  status: StatusFilter;
-  totalPages: number;
-  totalVisibleItems: number;
-}) {
+export function CatalogBrowser() {
+  const {
+    catalog,
+    currentPage,
+    items,
+    query,
+    setCurrentPage,
+    setQuery,
+    setStatus,
+    status,
+    totalPages,
+    totalVisibleItems,
+  } = useCatalogControls();
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + items.length;
   const paginationTokens = getPaginationTokens(currentPage, totalPages);
@@ -83,35 +78,18 @@ export function CatalogBrowser({
   return (
     <div className="space-y-8 sm:space-y-10">
       <div className="panel-soft rounded-[2rem] p-5 sm:rounded-[2.4rem] sm:p-6 lg:p-7">
-        <Form
-          action="/#catalogo"
-          scroll={false}
-          className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-5"
-        >
-          {catalog !== "MEN" ? (
-            <input type="hidden" name="catalog" value={catalog} />
-          ) : null}
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:flex-1">
-            <label className="input-shell flex-1">
-              <span className="sr-only">Buscar fragancia</span>
-              <input
-                type="search"
-                name="q"
-                defaultValue={query}
-                placeholder="Buscar por nombre, línea o perfume..."
-                className="w-full border-0 bg-transparent text-sm text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-soft)]"
-              />
-            </label>
-
-            {status !== "all" ? (
-              <input type="hidden" name="status" value={status} />
-            ) : null}
-
-            <button type="submit" className="filter-pill w-full sm:w-auto">
-              Buscar
-            </button>
-          </div>
-
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-5">
+          <CatalogLiveSearch
+            query={query}
+            onQueryChange={setQuery}
+            placeholder="Buscar por nombre, linea o perfume..."
+            srLabel="Buscar fragancia"
+            formClassName="flex flex-col gap-3 sm:flex-row sm:items-center lg:flex-1"
+            labelClassName="input-shell flex-1"
+            inputClassName="w-full border-0 bg-transparent text-sm text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-soft)]"
+            buttonClassName="filter-pill w-full sm:w-auto"
+            buttonText="Buscar"
+          />
           <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:gap-3">
             {statusFilters.map((filter) => {
               const isActive = filter.value === status;
@@ -125,7 +103,10 @@ export function CatalogBrowser({
                     query,
                     status: filter.value,
                   })}
-                  scroll={false}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setStatus(filter.value);
+                  }}
                   className={`filter-pill ${
                     filter.value === "COMING_SOON"
                       ? "col-span-2 sm:col-span-1"
@@ -137,7 +118,7 @@ export function CatalogBrowser({
               );
             })}
           </div>
-        </Form>
+        </div>
 
         <p className="mt-4 text-sm text-[var(--color-ink-soft)]">
           {totalVisibleItems > 0
@@ -299,7 +280,10 @@ export function CatalogBrowser({
                   query,
                   status,
                 })}
-                scroll={false}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setCurrentPage(currentPage - 1);
+                }}
                 className="filter-pill"
               >
                 Anterior
@@ -330,7 +314,10 @@ export function CatalogBrowser({
                     query,
                     status,
                   })}
-                  scroll={false}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setCurrentPage(token);
+                  }}
                   aria-current={isActive ? "page" : undefined}
                   className={`filter-pill inline-flex min-w-10 items-center justify-center sm:min-w-12 ${
                     isActive ? "filter-pill-active" : ""
@@ -356,7 +343,10 @@ export function CatalogBrowser({
                   query,
                   status,
                 })}
-                scroll={false}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setCurrentPage(currentPage + 1);
+                }}
                 className="filter-pill"
               >
                 Siguiente

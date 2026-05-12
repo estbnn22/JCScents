@@ -1,27 +1,26 @@
 "use client";
 
-import Form from "next/form";
 import Link from "next/link";
 import { useState } from "react";
 
-import type { StatusFilter } from "@/app/_components/catalog-browser";
 import {
+  useCatalogControls,
+} from "@/app/_components/catalog-controls-provider";
+import { CatalogLiveSearch } from "@/app/_components/catalog-live-search";
+import {
+  getCatalogLabel,
   type CatalogType,
-  defaultCatalogType,
 } from "@/lib/catalog-config";
 import { buildCatalogCollectionHref } from "@/lib/catalog-links";
 import { siteContactLinks } from "@/lib/site-contact-links";
 
 export function MobileHeroNav({
-  currentQuery,
-  currentStatus,
   selectedCatalog,
 }: {
-  currentQuery: string;
-  currentStatus: StatusFilter;
   selectedCatalog: CatalogType;
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { query, setQuery } = useCatalogControls();
 
   return (
     <div
@@ -73,8 +72,8 @@ export function MobileHeroNav({
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 gap-2.5 min-[360px]:grid-cols-2">
                   {([
-                    { value: "MEN", label: "Men Catalog" },
-                    { value: "WOMEN", label: "Women Catalog" },
+                    { value: "MEN" },
+                    { value: "WOMEN" },
                   ] as const).map((option) => {
                     const isActive = option.value === selectedCatalog;
 
@@ -95,41 +94,24 @@ export function MobileHeroNav({
                         }`}
                         onClick={() => setIsOpen(false)}
                       >
-                        {option.label}
+                        {getCatalogLabel(option.value)}
                       </Link>
                     );
                   })}
                 </div>
 
-                <Form
-                  action="/#catalogo"
-                  scroll={false}
-                  className="flex flex-col gap-3"
-                  onSubmit={() => setIsOpen(false)}
-                >
-                  {selectedCatalog !== defaultCatalogType ? (
-                    <input type="hidden" name="catalog" value={selectedCatalog} />
-                  ) : null}
-                  {currentStatus !== "all" ? (
-                    <input type="hidden" name="status" value={currentStatus} />
-                  ) : null}
-                  <label className="flex-1 rounded-full border border-white/12 bg-white/9 px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-                    <span className="sr-only">Buscar perfumes o colognes</span>
-                    <input
-                      type="search"
-                      name="q"
-                      defaultValue={currentQuery}
-                      placeholder="Buscar perfumes, colognes o marcas..."
-                      className="w-full border-0 bg-transparent text-sm text-white outline-none placeholder:text-white/52"
-                    />
-                  </label>
-                  <button
-                    type="submit"
-                    className="inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-full bg-[var(--color-gold)] px-6 py-3 text-sm font-semibold text-[var(--color-plum-950)] shadow-[0_14px_32px_rgba(20,6,33,0.22)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-soft)]"
-                  >
-                    Search
-                  </button>
-                </Form>
+                <CatalogLiveSearch
+                  query={query}
+                  onQueryChange={setQuery}
+                  placeholder="Buscar perfumes, colognes o marcas..."
+                  srLabel="Buscar perfumes o colognes"
+                  formClassName="flex flex-col gap-3"
+                  labelClassName="flex-1 rounded-full border border-white/12 bg-white/9 px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
+                  inputClassName="w-full border-0 bg-transparent text-sm text-white outline-none placeholder:text-white/52"
+                  buttonClassName="inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-full bg-[var(--color-gold)] px-6 py-3 text-sm font-semibold text-[var(--color-plum-950)] shadow-[0_14px_32px_rgba(20,6,33,0.22)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-soft)]"
+                  buttonText="Search"
+                  onSubmitComplete={() => setIsOpen(false)}
+                />
               </div>
             </div>
 

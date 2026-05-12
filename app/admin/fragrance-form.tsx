@@ -66,6 +66,14 @@ type SelectedAccord = {
   strength: number;
 };
 
+type EditableSizeRow = {
+  id: number;
+  price: string;
+  sizeMl: string;
+};
+
+const editableSizeOptions = [10, 5, 3] as const;
+
 export function FragranceForm({
   action,
   defaultCatalog = defaultCatalogType,
@@ -87,15 +95,18 @@ export function FragranceForm({
     action,
     emptyFragranceFormState,
   );
+  const initialSizeRows = getInitialEditableSizeRows(item);
   const [selectedAccords, setSelectedAccords] = useState(() =>
     getInitialAccords(item),
   );
+  const [sizeRows, setSizeRows] = useState(initialSizeRows);
   const [accordSearch, setAccordSearch] = useState("");
   const deferredAccordSearch = useDeferredValue(accordSearch);
   const filteredAccords = getFilteredAccords(
     selectedAccords,
     deferredAccordSearch,
   );
+  const unsupportedExistingSizes = getUnsupportedExistingSizes(item);
   const customAccordCandidate = normalizeAccordLabel(accordSearch);
   const canAddCustomAccord =
     customAccordCandidate.length > 0 &&
@@ -128,6 +139,41 @@ export function FragranceForm({
       ];
     });
     setAccordSearch("");
+  }
+
+  function updateSizeRow(
+    rowId: number,
+    fieldName: "price" | "sizeMl",
+    value: string,
+  ) {
+    setSizeRows((currentRows) =>
+      currentRows.map((row) =>
+        row.id === rowId
+          ? {
+              ...row,
+              [fieldName]: value,
+            }
+          : row,
+      ),
+    );
+  }
+
+  function addSizeRow() {
+    setSizeRows((currentRows) => [
+      ...currentRows,
+      {
+        id: currentRows.reduce(
+          (maxRowId, row) => Math.max(maxRowId, row.id),
+          0,
+        ) + 1,
+        price: "",
+        sizeMl: "",
+      },
+    ]);
+  }
+
+  function removeSizeRow(rowId: number) {
+    setSizeRows((currentRows) => currentRows.filter((row) => row.id !== rowId));
   }
 
   return (
@@ -273,52 +319,171 @@ export function FragranceForm({
           </Field>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
-          <Field
-            hint="Texto corto para la descripcion principal del producto."
-            label="Resumen"
-          >
-            <textarea
-              name="summary"
-              defaultValue={item?.summary ?? ""}
-              className={textareaClassName}
-              placeholder="Perfil citrico y amaderado con salida limpia..."
-            />
-          </Field>
-
-          <Field
-            hint="Opcional. Util si quieres conservar texto original del catalogo."
-            label="Raw Text"
-          >
-            <textarea
-              name="rawText"
-              defaultValue={item?.rawText ?? ""}
-              className={textareaClassName}
-              placeholder="Texto libre del catalogo o referencia interna..."
-            />
-          </Field>
-        </div>
+        <Field
+          hint="Texto corto para la descripcion principal del producto."
+          label="Resumen"
+        >
+          <textarea
+            name="summary"
+            defaultValue={item?.summary ?? ""}
+            className={textareaClassName}
+            placeholder="Perfil citrico y amaderado con salida limpia..."
+          />
+        </Field>
 
         <div className="grid gap-5 xl:grid-cols-2">
           <Field
             error={state.fieldErrors.sizes}
             errorId={buildErrorId(formId, "sizes")}
-            hint="Una linea por tamano. Formato: 100|85 o 50|55.5"
+            hint="Selecciona el tamano y escribe el precio. Puedes agregar hasta tres opciones: 10ml, 5ml y 3ml."
             label="Tamanos y precios"
           >
-            <textarea
-              required
-              aria-describedby={buildAriaDescribedBy(
-                formId,
-                "sizes",
-                state.fieldErrors.sizes,
-              )}
-              aria-invalid={Boolean(state.fieldErrors.sizes)}
-              name="sizes"
-              defaultValue={formatSizesField(item)}
-              className={getTextareaClassName(Boolean(state.fieldErrors.sizes))}
-              placeholder={"100|85\n50|55"}
-            />
+            <div
+              className={`${getGroupClassName(
+                Boolean(state.fieldErrors.sizes),
+              )} space-y-4`}
+            >
+              {sizeRows.map((row, index) => (
+                <div
+                  key={row.id}
+                  className="rounded-[1.3rem] border border-[rgba(82,33,117,0.1)] bg-white/80 p-4"
+                >
+                  <div className="mb-3 flex items-center justify-between gap-3">
+                    <p className="text-sm font-semibold text-[var(--color-plum-900)]">
+                      Opcion {index + 1}
+                    </p>
+                    {sizeRows.length > 1 ? (
+                      <button
+                        type="button"
+                        onClick={() => removeSizeRow(row.id)}
+                        className="inline-flex min-h-[2.4rem] items-center justify-center rounded-full border border-[rgba(82,33,117,0.14)] bg-white px-3 py-2 text-xs font-semibold text-[var(--color-plum-900)] transition hover:border-red-200 hover:text-red-700"
+                      >
+                        Quitar
+                      </button>
+                    ) : null}
+                  </div>
+
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <label className="space-y-2">
+                      <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-soft)]">
+                        Tamano
+                      </span>
+                      <select
+                        required={index === 0}
+                        aria-describedby={buildAriaDescribedBy(
+                          formId,
+                          "sizes",
+                          state.fieldErrors.sizes,
+                        )}
+                        aria-invalid={Boolean(state.fieldErrors.sizes)}
+                        name="sizeMl"
+                        value={row.sizeMl}
+                        onChange={(event) =>
+                          updateSizeRow(row.id, "sizeMl", event.target.value)
+                        }
+                        className={getSelectClassName(Boolean(state.fieldErrors.sizes))}
+                      >
+                        <option value="">Selecciona un tamano</option>
+                        {editableSizeOptions.map((sizeOption) => {
+                          const isSelectedInAnotherRow = sizeRows.some(
+                            (currentRow) =>
+                              currentRow.id !== row.id &&
+                              currentRow.sizeMl === String(sizeOption),
+                          );
+
+                          return (
+                            <option
+                              key={sizeOption}
+                              value={String(sizeOption)}
+                              disabled={isSelectedInAnotherRow}
+                            >
+                              {sizeOption}ml
+                            </option>
+                          );
+                        })}
+                      </select>
+                    </label>
+
+                    <label className="space-y-2">
+                      <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-soft)]">
+                        Precio
+                      </span>
+                      <div
+                        className={getInputShellClassName(
+                          Boolean(state.fieldErrors.sizes),
+                        )}
+                      >
+                        <span className="text-sm font-semibold text-[var(--color-ink-soft)]">
+                          $
+                        </span>
+                        <input
+                          required={index === 0}
+                          aria-describedby={buildAriaDescribedBy(
+                            formId,
+                            "sizes",
+                            state.fieldErrors.sizes,
+                          )}
+                          aria-invalid={Boolean(state.fieldErrors.sizes)}
+                          name="sizePrice"
+                          type="text"
+                          inputMode="decimal"
+                          value={row.price}
+                          onChange={(event) =>
+                            updateSizeRow(row.id, "price", event.target.value)
+                          }
+                          className="w-full border-0 bg-transparent text-sm text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-soft)]"
+                          placeholder="35.00"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              ))}
+
+              {sizeRows.length < editableSizeOptions.length ? (
+                <button
+                  type="button"
+                  onClick={addSizeRow}
+                  className="inline-flex min-h-[3rem] items-center justify-center rounded-full border border-[rgba(82,33,117,0.14)] bg-white px-4 py-2 text-sm font-semibold text-[var(--color-plum-900)] transition hover:-translate-y-0.5 hover:border-[rgba(220,176,103,0.58)]"
+                >
+                  Agregar otro tamano
+                </button>
+              ) : null}
+
+              {unsupportedExistingSizes.length > 0 ? (
+                <div className="rounded-[1.2rem] border border-[rgba(220,176,103,0.28)] bg-[rgba(220,176,103,0.08)] px-4 py-3">
+                  <p className="text-sm font-semibold text-[var(--color-plum-900)]">
+                    Tamanos existentes conservados automaticamente
+                  </p>
+                  <p className="mt-1 text-xs leading-6 text-[var(--color-ink-soft)]">
+                    Esta fragancia ya tiene tamanos fuera de 10ml, 5ml y 3ml.
+                    Se enviaran sin cambios al guardar.
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {unsupportedExistingSizes.map((size) => (
+                      <div
+                        key={`legacy-size-${size.sizeMl}`}
+                        className="rounded-full border border-[rgba(82,33,117,0.12)] bg-white px-3 py-2 text-xs font-semibold text-[var(--color-plum-900)]"
+                      >
+                        {size.sizeMl}ml · ${size.price.toFixed(2)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
+              {unsupportedExistingSizes.map((size) => (
+                <Fragment key={`legacy-hidden-${size.sizeMl}`}>
+                  <input type="hidden" name="sizeMl" readOnly value={String(size.sizeMl)} />
+                  <input
+                    type="hidden"
+                    name="sizePrice"
+                    readOnly
+                    value={size.price.toFixed(2)}
+                  />
+                </Fragment>
+              ))}
+            </div>
           </Field>
 
           <Field
@@ -804,22 +969,8 @@ function getSelectClassName(hasError: boolean) {
   }`;
 }
 
-function getTextareaClassName(hasError: boolean) {
-  return `${textareaClassName} ${
-    hasError ? "border-red-300 bg-red-50/60" : ""
-  }`;
-}
-
 function formatNotesField(notes: string[] | undefined) {
   return notes?.join("\n") ?? "";
-}
-
-function formatSizesField(item: CatalogItem | undefined) {
-  return (
-    item?.sizes
-      .map((size) => `${size.sizeMl}|${size.price.toFixed(2)}`)
-      .join("\n") ?? ""
-  );
 }
 
 function getInitialAccords(item: CatalogItem | undefined): SelectedAccord[] {
@@ -876,5 +1027,43 @@ function normalizeAccordStrengthValue(value: number, fallback: number) {
   return Math.max(
     ACCORD_STRENGTH_MIN,
     Math.min(ACCORD_STRENGTH_MAX, value),
+  );
+}
+
+function getInitialEditableSizeRows(
+  item: CatalogItem | undefined,
+): EditableSizeRow[] {
+  const existingSizesByMl = new Map(
+    item?.sizes.map((size) => [size.sizeMl, size.price.toFixed(2)]) ?? [],
+  );
+  const supportedRows = editableSizeOptions
+    .filter((sizeMl) => existingSizesByMl.has(sizeMl))
+    .map((sizeMl, index) => ({
+      id: index + 1,
+      price: existingSizesByMl.get(sizeMl) ?? "",
+      sizeMl: String(sizeMl),
+    }));
+
+  if (supportedRows.length > 0) {
+    return supportedRows;
+  }
+
+  return [
+    {
+      id: 1,
+      price: "",
+      sizeMl: "",
+    },
+  ];
+}
+
+function getUnsupportedExistingSizes(item: CatalogItem | undefined) {
+  return (
+    item?.sizes.filter(
+      (size) =>
+        !editableSizeOptions.includes(
+          size.sizeMl as (typeof editableSizeOptions)[number],
+        ),
+    ) ?? []
   );
 }

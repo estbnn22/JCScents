@@ -469,7 +469,7 @@ function parseFragrancePayload(formData: FormData): FragrancePayload | { error: 
     "seasons",
     VALID_SEASONS,
   );
-  const sizes = parseSizesField(readFormValue(formData, "sizes"));
+  const sizes = parseSizesField(formData);
 
   if (!fullName) {
     return { error: "missing-name" };
@@ -609,23 +609,37 @@ function parseEnumCheckboxGroup<T extends string>(
   return Array.from(new Set(values)) as T[];
 }
 
-function parseSizesField(value: string): ParsedSize[] {
-  const lines = value
-    .split("\n")
-    .map((entry) => entry.trim())
-    .filter(Boolean);
+function parseSizesField(formData: FormData): ParsedSize[] {
+  const sizeValues = formData
+    .getAll("sizeMl")
+    .map((value) => (typeof value === "string" ? value.trim() : ""));
+  const priceValues = formData
+    .getAll("sizePrice")
+    .map((value) => (typeof value === "string" ? value.trim() : ""));
+
+  if (sizeValues.length !== priceValues.length) {
+    return [];
+  }
 
   const sizes: ParsedSize[] = [];
 
-  for (const [index, line] of lines.entries()) {
-    const match = line.match(/^(\d+)\s*(?:ml)?\s*[\|,:-]\s*\$?\s*(\d+(?:\.\d{1,2})?)$/i);
+  for (const [index, rawSizeValue] of sizeValues.entries()) {
+    const rawPriceValue = priceValues[index] ?? "";
 
-    if (!match) {
+    if (!rawSizeValue && !rawPriceValue) {
+      continue;
+    }
+
+    if (!rawSizeValue || !rawPriceValue) {
       return [];
     }
 
-    const sizeMl = Number.parseInt(match[1], 10);
-    const price = Number.parseFloat(match[2]);
+    if (!/^\d+$/.test(rawSizeValue) || !/^\d+(?:\.\d{1,2})?$/.test(rawPriceValue)) {
+      return [];
+    }
+
+    const sizeMl = Number.parseInt(rawSizeValue, 10);
+    const price = Number.parseFloat(rawPriceValue);
 
     if (!Number.isInteger(sizeMl) || sizeMl <= 0 || Number.isNaN(price) || price <= 0) {
       return [];
@@ -866,7 +880,7 @@ function resolveFragranceFieldError(error: string): {
       return {
         field: "sizes",
         message:
-          "Agrega al menos un tamano valido con su precio, por ejemplo `100|85`.",
+          "Agrega al menos un tamano valido con su precio, por ejemplo 10ml con 35.00.",
       };
     case "missing-slug":
       return {
