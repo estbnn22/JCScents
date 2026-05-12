@@ -86,9 +86,6 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                 <h2 className="font-display text-3xl text-[var(--color-plum-900)]">
                   Iniciar sesión
                 </h2>
-                <p className="mt-3 text-sm leading-7 text-[var(--color-ink-soft)]">
-                  Usa el `username` y `password` definidos en tu `.env`.
-                </p>
 
                 {!isConfigured ? (
                   <div className="mt-6 rounded-[1.6rem] border border-red-200 bg-red-50 px-5 py-4 text-sm leading-7 text-red-700">
@@ -201,7 +198,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   const catalogScopedAdminItems = adminItems.filter((item) =>
     matchesCatalogFilter(item.catalog, currentCatalogFilter),
   );
-  const filteredAdminItems = filterAdminItems(catalogScopedAdminItems, currentQuery);
+  const filteredAdminItems = filterAdminItems(
+    catalogScopedAdminItems,
+    currentQuery,
+  );
   const totalFilteredItems = filteredAdminItems.length;
   const totalPages = Math.max(
     1,
@@ -325,7 +325,9 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                   <FragranceForm
                     action={createFragrance}
                     defaultCatalog={
-                      currentCatalogFilter === "ALL" ? "MEN" : currentCatalogFilter
+                      currentCatalogFilter === "ALL"
+                        ? "MEN"
+                        : currentCatalogFilter
                     }
                     formId="create-fragrance"
                     listState={currentListState}
@@ -360,21 +362,22 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                       className="flex w-full max-w-4xl flex-col gap-3"
                     >
                       <div className="flex flex-wrap gap-2">
-                        {buildCatalogFilterOptions(currentCatalogFilter, currentQuery).map(
-                          (option) => (
-                            <Link
-                              key={option.label}
-                              href={option.href}
-                              className={`inline-flex min-h-[3rem] items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold transition ${
-                                option.isActive
-                                  ? "border-[var(--color-gold)] bg-[var(--color-gold)] text-[var(--color-plum-950)]"
-                                  : "border-[rgba(82,33,117,0.14)] bg-white text-[var(--color-plum-900)] hover:-translate-y-0.5 hover:border-[rgba(220,176,103,0.58)] hover:text-[var(--color-gold-deep)]"
-                              }`}
-                            >
-                              {option.label}
-                            </Link>
-                          ),
-                        )}
+                        {buildCatalogFilterOptions(
+                          currentCatalogFilter,
+                          currentQuery,
+                        ).map((option) => (
+                          <Link
+                            key={option.label}
+                            href={option.href}
+                            className={`inline-flex min-h-[3rem] items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                              option.isActive
+                                ? "border-[var(--color-gold)] bg-[var(--color-gold)] text-[var(--color-plum-950)]"
+                                : "border-[rgba(82,33,117,0.14)] bg-white text-[var(--color-plum-900)] hover:-translate-y-0.5 hover:border-[rgba(220,176,103,0.58)] hover:text-[var(--color-gold-deep)]"
+                            }`}
+                          >
+                            {option.label}
+                          </Link>
+                        ))}
                       </div>
 
                       {currentCatalogFilter !== "ALL" ? (
@@ -449,7 +452,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                         <summary className="expandable-panel-summary cursor-pointer list-none px-5 py-5 sm:px-6">
                           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                             <div className="flex min-w-0 items-start gap-4">
-                              <BottleSnapshot asset={item.bottleAsset} name={item.fullName} />
+                              <BottleSnapshot
+                                asset={item.bottleAsset}
+                                name={item.fullName}
+                              />
 
                               <div className="min-w-0">
                                 <div className="flex flex-wrap gap-2.5">
