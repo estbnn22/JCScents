@@ -15,16 +15,18 @@ import {
 } from "@/lib/admin-auth";
 import {
   getDefaultAccordStrength,
+  normalizeAccordLabel,
   type FragranceMoment,
   type FragranceSeason,
 } from "@/data/men-catalog-details";
 import {
+  buildBottleImagePublicPath,
   findCustomBottlePublicPathForSlug,
   getBottleAbsolutePathFromPublicPath,
-  getBottleDirectory,
   isSupportedBottleExtension,
   normalizeBottlePublicPath,
 } from "@/lib/catalog-bottle";
+import { catalogTypes, parseCatalogType, type CatalogType } from "@/lib/catalog-config";
 import { prisma, type PrismaTransactionClient } from "@/lib/prisma";
 
 import {
@@ -42,6 +44,7 @@ const VALID_SEASONS = new Set<FragranceSeason>([
   "winter",
 ]);
 const VALID_STATUSES = new Set(["ACTIVE", "COMING_SOON"]);
+const VALID_CATALOGS = new Set<CatalogType>(catalogTypes);
 
 type ParsedSize = {
   price: string;
@@ -53,6 +56,7 @@ type FragrancePayload = {
   accordNames: string[];
   accordStrengths: number[];
   baseNotes: string[];
+  catalog: CatalogType;
   fullName: string;
   middleNotes: string[];
   moments: FragranceMoment[];
@@ -101,6 +105,7 @@ export async function createFragrance(
   }
 
   const conflicts = await findConflicts({
+    catalog: payload.catalog,
     slug: payload.slug,
     sourcePage: payload.sourcePage,
   });
@@ -114,6 +119,7 @@ export async function createFragrance(
   }
 
   const imageChange = await prepareBottleImageChange({
+    nextCatalog: payload.catalog,
     nextSlug: payload.slug,
     uploadedFile: readFileField(formData, "bottleImage"),
   });
@@ -128,7 +134,7 @@ export async function createFragrance(
         accordNames: payload.accordNames,
         accordStrengths: payload.accordStrengths,
         baseNotes: payload.baseNotes,
-        catalog: "MEN",
+        catalog: payload.catalog,
         detailsCustomized: true,
         fullName: payload.fullName,
         imagePath: imageChange.nextImagePath,
@@ -157,9 +163,10 @@ export async function createFragrance(
   revalidateCatalogPaths(payload.slug);
   redirect(
     buildAdminRedirect({
-      focus: payload.slug,
-      notice: "created",
       ...redirectContext,
+      catalog: payload.catalog,
+      focus: `${payload.catalog}:${payload.slug}`,
+      notice: "created",
     }),
   );
 }
@@ -183,6 +190,7 @@ export async function updateFragrance(
       id: fragranceId,
     },
     select: {
+      catalog: true,
       id: true,
       imagePath: true,
       slug: true,
@@ -194,6 +202,7 @@ export async function updateFragrance(
   }
 
   const conflicts = await findConflicts({
+    catalog: payload.catalog,
     excludeId: fragranceId,
     slug: payload.slug,
     sourcePage: payload.sourcePage,
@@ -210,7 +219,11 @@ export async function updateFragrance(
   const imageChange = await prepareBottleImageChange({
     existingImagePath:
       existingFragrance.imagePath ??
-      (await findCustomBottlePublicPathForSlug(existingFragrance.slug)),
+      (await findCustomBottlePublicPathForSlug(
+        existingFragrance.catalog,
+        existingFragrance.slug,
+      )),
+    nextCatalog: payload.catalog,
     nextSlug: payload.slug,
     removeCurrentImage: readCheckboxValue(formData, "removeBottleImage"),
     uploadedFile: readFileField(formData, "bottleImage"),
@@ -236,6 +249,7 @@ export async function updateFragrance(
           baseNotes: {
             set: payload.baseNotes,
           },
+          catalog: payload.catalog,
           detailsCustomized: true,
           fullName: payload.fullName,
           imagePath: imageChange.nextImagePath,
@@ -277,9 +291,10 @@ export async function updateFragrance(
     await cleanupBottlePublicPath(imageChange.uploadedImagePath);
     redirect(
       buildAdminRedirect({
-        error: "save-failed",
-        focus: payload.slug,
         ...redirectContext,
+        catalog: payload.catalog,
+        error: "save-failed",
+        focus: `${payload.catalog}:${payload.slug}`,
       }),
     );
   }
@@ -290,9 +305,10 @@ export async function updateFragrance(
   revalidateCatalogPaths(payload.slug);
   redirect(
     buildAdminRedirect({
-      focus: payload.slug,
-      notice: "updated",
       ...redirectContext,
+      catalog: payload.catalog,
+      focus: `${payload.catalog}:${payload.slug}`,
+      notice: "updated",
     }),
   );
 }
@@ -306,6 +322,7 @@ export async function deleteFragrance(fragranceId: string, formData: FormData) {
       id: fragranceId,
     },
     select: {
+      catalog: true,
       imagePath: true,
       slug: true,
     },
@@ -328,7 +345,10 @@ export async function deleteFragrance(fragranceId: string, formData: FormData) {
 
   await cleanupBottlePublicPath(
     existingFragrance.imagePath ??
-      (await findCustomBottlePublicPathForSlug(existingFragrance.slug)),
+      (await findCustomBottlePublicPathForSlug(
+        existingFragrance.catalog,
+        existingFragrance.slug,
+      )),
   );
 
   revalidateCatalogPaths(existingFragrance.slug);
@@ -342,6 +362,7 @@ async function assertAdminAuthenticated() {
 }
 
 function buildAdminRedirect(params: {
+  catalog?: CatalogType;
   error?: string;
   focus?: string;
   notice?: string;
@@ -362,6 +383,10 @@ function buildAdminRedirect(params: {
     searchParams.set("notice", params.notice);
   }
 
+  if (params.catalog) {
+    searchParams.set("catalog", params.catalog);
+  }
+
   if (params.query) {
     searchParams.set("q", params.query);
   }
@@ -376,16 +401,19 @@ function buildAdminRedirect(params: {
 }
 
 function readAdminListRedirectContext(formData: FormData) {
+  const catalog = parseCatalogType(readOptionalValue(formData, "redirectCatalog"));
   const query = readOptionalValue(formData, "redirectQuery");
   const page = parsePositiveInteger(readOptionalValue(formData, "redirectPage"));
 
   return {
+    catalog: catalog ?? undefined,
     page: page && page > 1 ? page : undefined,
     query: query ?? undefined,
   };
 }
 
 async function findConflicts(input: {
+  catalog: CatalogType;
   excludeId?: string;
   slug: string;
   sourcePage: number;
@@ -393,6 +421,7 @@ async function findConflicts(input: {
   const [slugMatch, sourcePageMatch] = await Promise.all([
     prisma.fragrance.findFirst({
       where: {
+        catalog: input.catalog,
         id: input.excludeId ? { not: input.excludeId } : undefined,
         slug: input.slug,
       },
@@ -402,6 +431,7 @@ async function findConflicts(input: {
     }),
     prisma.fragrance.findFirst({
       where: {
+        catalog: input.catalog,
         id: input.excludeId ? { not: input.excludeId } : undefined,
         sourcePage: input.sourcePage,
       },
@@ -418,6 +448,7 @@ async function findConflicts(input: {
 }
 
 function parseFragrancePayload(formData: FormData): FragrancePayload | { error: string } {
+  const rawCatalog = readFormValue(formData, "catalog");
   const fullName = readFormValue(formData, "fullName");
   const slug = slugify(readFormValue(formData, "slug"));
   const rawSourcePage = readFormValue(formData, "sourcePage");
@@ -442,6 +473,10 @@ function parseFragrancePayload(formData: FormData): FragrancePayload | { error: 
 
   if (!fullName) {
     return { error: "missing-name" };
+  }
+
+  if (!VALID_CATALOGS.has(rawCatalog as CatalogType)) {
+    return { error: "invalid-catalog" };
   }
 
   if (!slug) {
@@ -478,6 +513,7 @@ function parseFragrancePayload(formData: FormData): FragrancePayload | { error: 
     accordNames: accords.names,
     accordStrengths: accords.strengths,
     baseNotes,
+    catalog: rawCatalog as CatalogType,
     fullName,
     middleNotes,
     moments,
@@ -504,7 +540,9 @@ function parseListField(value: string) {
 function parseAccordsField(formData: FormData) {
   const accordNames = formData
     .getAll("accordNames")
-    .map((value) => (typeof value === "string" ? value.trim() : ""))
+    .map((value) =>
+      typeof value === "string" ? normalizeAccordLabel(value) : "",
+    )
     .filter(Boolean);
   const accordStrengthValues = formData
     .getAll("accordStrengths")
@@ -512,7 +550,13 @@ function parseAccordsField(formData: FormData) {
     .filter((value) => value.length > 0);
 
   if (accordNames.length === 0 && accordStrengthValues.length === 0) {
-    const fallbackAccordNames = parseListField(readFormValue(formData, "accordNames"));
+    const fallbackAccordNames = Array.from(
+      new Set(
+        parseListField(readFormValue(formData, "accordNames"))
+          .map((accordName) => normalizeAccordLabel(accordName))
+          .filter(Boolean),
+      ),
+    );
 
     return {
       names: fallbackAccordNames,
@@ -605,6 +649,7 @@ function parseSizesField(value: string): ParsedSize[] {
 
 async function prepareBottleImageChange(input: {
   existingImagePath?: string | null;
+  nextCatalog: CatalogType;
   nextSlug: string;
   removeCurrentImage?: boolean;
   uploadedFile?: File | null;
@@ -621,7 +666,11 @@ async function prepareBottleImageChange(input: {
   const uploadedFile = input.uploadedFile;
 
   if (uploadedFile && uploadedFile.size > 0) {
-    const persistedUpload = await persistBottleImageUpload(uploadedFile, input.nextSlug);
+    const persistedUpload = await persistBottleImageUpload(
+      uploadedFile,
+      input.nextCatalog,
+      input.nextSlug,
+    );
 
     if ("error" in persistedUpload) {
       return persistedUpload;
@@ -654,6 +703,7 @@ async function prepareBottleImageChange(input: {
 
 async function persistBottleImageUpload(
   uploadedFile: File,
+  catalog: CatalogType,
   slug: string,
 ): Promise<{ imagePath: string } | { error: string }> {
   if (uploadedFile.size <= 0) {
@@ -669,16 +719,14 @@ async function persistBottleImageUpload(
   if (!extension) {
     return { error: "unsupported-image-type" };
   }
-
-  const imageFilename = `${slug}${extension}`;
-  const imagePath = `/bottles/${imageFilename}`;
+  const imagePath = buildBottleImagePublicPath(catalog, slug, extension);
   const absolutePath = getBottleAbsolutePathFromPublicPath(imagePath);
 
   if (!absolutePath) {
     return { error: "unsupported-image-type" };
   }
 
-  await mkdir(getBottleDirectory(), { recursive: true });
+  await mkdir(path.dirname(absolutePath), { recursive: true });
   await writeFile(absolutePath, Buffer.from(await uploadedFile.arrayBuffer()));
 
   return {
@@ -759,18 +807,23 @@ function resolveFragranceFieldError(error: string): {
       return {
         field: "slug",
         message:
-          "Ese slug ya existe. Usa uno diferente para evitar conflictos en la ruta.",
+          "Ese slug ya existe dentro de este catálogo. Usa uno diferente para evitar conflictos en la ruta.",
       };
     case "duplicate-source-page":
       return {
         field: "sourcePage",
         message:
-          "Ese numero de orden/source page ya esta ocupado por otra fragancia.",
+          "Ese numero de orden/source page ya esta ocupado dentro de este catálogo.",
       };
     case "invalid-image-file":
       return {
         field: "bottleImage",
         message: "La imagen seleccionada no se pudo leer correctamente.",
+      };
+    case "invalid-catalog":
+      return {
+        field: "catalog",
+        message: "Selecciona si la fragancia pertenece a caballeros o damas.",
       };
     case "invalid-accords":
       return {

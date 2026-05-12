@@ -4,7 +4,16 @@ import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 
 import { resolveBottleImageAsset } from "@/lib/catalog-bottle";
-import { getMenCatalogItemBySlug, getStaticMenCatalogItems } from "@/lib/catalog";
+import {
+  defaultCatalogType,
+  parseCatalogType,
+  type CatalogType,
+} from "@/lib/catalog-config";
+import {
+  buildCatalogCollectionHref,
+  buildCatalogItemHref,
+} from "@/lib/catalog-links";
+import { getCatalogItemBySlug } from "@/lib/catalog";
 
 export const dynamic = "force-dynamic";
 
@@ -43,27 +52,32 @@ const sizeExampleAssets = {
   },
 } as const;
 
-export async function generateStaticParams() {
-  return getStaticMenCatalogItems().map((item) => ({
-    slug: item.slug,
-  }));
-}
-
 export default async function CatalogDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{
     slug: string;
   }>;
+  searchParams: Promise<{
+    catalog?: string | string[];
+  }>;
 }) {
   const { slug } = await params;
-  const { item, previousItem, nextItem } = await getMenCatalogItemBySlug(slug);
+  const { catalog } = await searchParams;
+  const selectedCatalog =
+    parseCatalogType(normalizeSearchParam(catalog)) ?? defaultCatalogType;
+  const { item, previousItem, nextItem } = await getCatalogItemBySlug(
+    selectedCatalog,
+    slug,
+  );
 
   if (!item) {
     notFound();
   }
 
   const bottleAsset = await resolveBottleImageAsset(
+    item.catalog,
     item.slug,
     item.sourcePage,
     item.imagePath,
@@ -79,7 +93,7 @@ export default async function CatalogDetailPage({
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:gap-5 sm:px-6 sm:py-6 lg:gap-6 lg:px-8 lg:py-7">
           <div className="fade-in-up flex flex-col gap-3 border-b border-white/12 pb-3 text-white/78 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:pb-4">
             <Link
-              href="/#catalogo"
+              href={buildCatalogCollectionHref({ catalog: selectedCatalog })}
               className="inline-flex items-center rounded-full border border-white/18 px-3.5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.24em] transition hover:border-[var(--color-gold)] hover:text-white sm:text-xs"
             >
               Volver al catálogo
@@ -108,10 +122,12 @@ export default async function CatalogDetailPage({
 
             <div className="flex items-center gap-2.5 self-start">
               <CatalogPagerArrow
+                catalog={selectedCatalog}
                 direction="previous"
                 item={previousItem}
               />
               <CatalogPagerArrow
+                catalog={selectedCatalog}
                 direction="next"
                 item={nextItem}
               />
@@ -247,7 +263,7 @@ export default async function CatalogDetailPage({
 function NotesPanel({
   item,
 }: {
-  item: NonNullable<Awaited<ReturnType<typeof getMenCatalogItemBySlug>>["item"]>;
+  item: NonNullable<Awaited<ReturnType<typeof getCatalogItemBySlug>>["item"]>;
 }) {
   return (
     <section className="panel-soft rounded-[1.35rem] p-4 sm:rounded-[1.6rem] sm:p-5">
@@ -281,11 +297,13 @@ function NoteGroupSection({ notes, title }: { notes: string[]; title: string }) 
 }
 
 function CatalogPagerArrow({
+  catalog,
   direction,
   item,
 }: {
+  catalog: CatalogType;
   direction: "previous" | "next";
-  item: Awaited<ReturnType<typeof getMenCatalogItemBySlug>>["item"];
+  item: Awaited<ReturnType<typeof getCatalogItemBySlug>>["item"];
 }) {
   const arrow = direction === "previous" ? "\u2190" : "\u2192";
   const label = direction === "previous" ? "Fragancia anterior" : "Siguiente fragancia";
@@ -304,7 +322,7 @@ function CatalogPagerArrow({
 
   return (
     <Link
-      href={`/catalog/${item.slug}`}
+      href={buildCatalogItemHref(item.slug, catalog)}
       aria-label={`${label}: ${item.fullName}`}
       title={`${label}: ${item.fullName}`}
       className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/16 bg-white/8 text-lg text-white transition hover:-translate-y-0.5 hover:border-[var(--color-gold)] hover:text-[var(--color-gold-soft)] sm:h-11 sm:w-11 sm:text-xl"
@@ -312,4 +330,8 @@ function CatalogPagerArrow({
       {arrow}
     </Link>
   );
+}
+
+function normalizeSearchParam(value?: string | string[]) {
+  return Array.isArray(value) ? value[0] ?? "" : value ?? "";
 }

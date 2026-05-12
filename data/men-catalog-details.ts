@@ -84,16 +84,21 @@ export function getDefaultAccordStrength(index: number) {
   return accordStrengthScale[index] ?? 40;
 }
 
+export function normalizeAccordLabel(value: string) {
+  return value.trim().replace(/\s+/g, " ").toLowerCase();
+}
+
 export function buildAccords(
   names: string[],
   strengths?: number[],
 ): FragranceAccord[] {
   return names.slice(0, 10).map((rawName, index) => {
-    const name = normalizeAccordName(rawName);
+    const name = normalizeAccordLabel(rawName) || normalizeAccordName(rawName);
+    const paletteAccord = normalizeAccordName(name);
     const strength = strengths?.[index];
 
     return {
-      color: accordPalette[name] ?? accordPalette.woody,
+      color: accordPalette[paletteAccord] ?? accordPalette.woody,
       name,
       strength: normalizeAccordStrength(strength, index),
     };
@@ -109,7 +114,7 @@ function normalizeAccordStrength(value: number | undefined, index: number) {
 }
 
 export function normalizeAccordName(value: string) {
-  const normalized = value.trim().toLowerCase();
+  const normalized = normalizeAccordLabel(value);
   const aliases: Record<string, keyof typeof accordPalette> = {
     animalic: "leather",
     anis: "fresh spicy",

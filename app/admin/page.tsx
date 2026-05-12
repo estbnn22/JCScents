@@ -7,11 +7,20 @@ import {
   resolveBottleImageAsset,
   type BottleImageAsset,
 } from "@/lib/catalog-bottle";
-import { type CatalogItem, getMenCatalogItems } from "@/lib/catalog";
+import {
+  type CatalogItem,
+  getMenCatalogItems,
+  getWomenCatalogItems,
+} from "@/lib/catalog";
 import {
   hasAdminCredentialsConfigured,
   isAdminAuthenticated,
 } from "@/lib/admin-auth";
+import {
+  getCatalogLabel,
+  parseCatalogType,
+  type CatalogType,
+} from "@/lib/catalog-config";
 
 import { FragranceForm } from "./fragrance-form";
 import {
@@ -32,6 +41,7 @@ type AdminCatalogItem = CatalogItem & {
 
 type AdminPageProps = {
   searchParams: Promise<{
+    catalog?: string | string[];
     error?: string | string[];
     focus?: string | string[];
     notice?: string | string[];
@@ -40,13 +50,16 @@ type AdminPageProps = {
   }>;
 };
 
+type AdminCatalogFilter = CatalogType | "ALL";
+
 type AdminListState = {
+  catalog: AdminCatalogFilter;
   page: number;
   query: string;
 };
 
 export default async function AdminPage({ searchParams }: AdminPageProps) {
-  const [{ error, focus, notice, page, q }, isAuthenticated] =
+  const [{ catalog, error, focus, notice, page, q }, isAuthenticated] =
     await Promise.all([searchParams, isAdminAuthenticated()]);
   const isConfigured = hasAdminCredentialsConfigured();
 
@@ -144,11 +157,16 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   let loadError: string | null = null;
 
   try {
-    items = await getMenCatalogItems();
+    const [menItems, womenItems] = await Promise.all([
+      getMenCatalogItems(),
+      getWomenCatalogItems(),
+    ]);
+    items = [...menItems, ...womenItems].sort(compareAdminItems);
     adminItems = await Promise.all(
       items.map(async (item) => ({
         ...item,
         bottleAsset: await resolveBottleImageAsset(
+          item.catalog,
           item.slug,
           item.sourcePage,
           item.imagePath,
@@ -162,14 +180,28 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
         : "No se pudo cargar el catálogo desde Prisma.";
   }
 
+  const currentCatalogFilter =
+    parseCatalogType(normalizeSearchParam(catalog)) ?? "ALL";
   const availableCount = items.filter(
-    (item) => item.status === "ACTIVE",
+    (item) =>
+      item.status === "ACTIVE" &&
+      matchesCatalogFilter(item.catalog, currentCatalogFilter),
   ).length;
-  const detailedCount = items.filter(hasManagedDetails).length;
+  const detailedCount = items.filter(
+    (item) =>
+      matchesCatalogFilter(item.catalog, currentCatalogFilter) &&
+      hasManagedDetails(item),
+  ).length;
   const normalizedFocus = normalizeSearchParam(focus);
   const normalizedNotice = normalizeSearchParam(notice);
   const currentQuery = normalizeSearchParam(q)?.trim() ?? "";
-  const filteredAdminItems = filterAdminItems(adminItems, currentQuery);
+  const catalogScopedItems = items.filter((item) =>
+    matchesCatalogFilter(item.catalog, currentCatalogFilter),
+  );
+  const catalogScopedAdminItems = adminItems.filter((item) =>
+    matchesCatalogFilter(item.catalog, currentCatalogFilter),
+  );
+  const filteredAdminItems = filterAdminItems(catalogScopedAdminItems, currentQuery);
   const totalFilteredItems = filteredAdminItems.length;
   const totalPages = Math.max(
     1,
@@ -180,6 +212,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
     totalPages,
   );
   const currentListState: AdminListState = {
+    catalog: currentCatalogFilter,
     page: currentPage,
     query: currentQuery,
   };
@@ -227,7 +260,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
         <div className="grid gap-4 px-6 py-8 sm:grid-cols-3 sm:px-8">
           <StatCard
             label="Total"
-            value={String(items.length)}
+            value={String(catalogScopedItems.length)}
             description="Fragancias cargadas actualmente en la base de datos."
           />
           <StatCard
@@ -291,6 +324,9 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                 <div className="border-t border-[rgba(82,33,117,0.08)] px-5 py-5 sm:px-6">
                   <FragranceForm
                     action={createFragrance}
+                    defaultCatalog={
+                      currentCatalogFilter === "ALL" ? "MEN" : currentCatalogFilter
+                    }
                     formId="create-fragrance"
                     listState={currentListState}
                     submitLabel="Guardar nueva fragancia"
@@ -310,7 +346,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                         {totalFilteredItems === 0
                           ? currentQuery
                             ? `No hay coincidencias para "${currentQuery}".`
-                            : "No hay fragancias para mostrar."
+                            : getEmptyCatalogMessage(currentCatalogFilter)
                           : `Mostrando ${resultsStart}-${resultsEnd} de ${totalFilteredItems} fragancia${
                               totalFilteredItems === 1 ? "" : "s"
                             }.`}
@@ -321,41 +357,73 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                       action="/admin"
                       replace
                       scroll={false}
-                      className="flex w-full max-w-2xl flex-col gap-3 sm:flex-row"
+                      className="flex w-full max-w-4xl flex-col gap-3"
                     >
-                      <label className="flex-1">
-                        <span className="sr-only">Buscar fragancia</span>
-                        <div className="input-shell">
-                          <input
-                            name="q"
-                            type="search"
-                            defaultValue={currentQuery}
-                            className="w-full border-0 bg-transparent text-sm text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-soft)]"
-                            placeholder="Buscar por nombre, slug o resumen"
-                          />
-                        </div>
-                      </label>
-                      <button
-                        type="submit"
-                        className="inline-flex min-h-[3.2rem] items-center justify-center rounded-full bg-[var(--color-gold)] px-5 py-3 text-sm font-semibold text-[var(--color-plum-950)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-soft)]"
-                      >
-                        Buscar
-                      </button>
-                      {currentQuery ? (
-                        <Link
-                          href="/admin"
-                          className="inline-flex min-h-[3.2rem] items-center justify-center rounded-full border border-[rgba(82,33,117,0.16)] bg-white px-5 py-3 text-sm font-semibold text-[var(--color-plum-900)] transition hover:-translate-y-0.5 hover:border-[rgba(220,176,103,0.58)] hover:text-[var(--color-gold-deep)]"
-                        >
-                          Limpiar
-                        </Link>
+                      <div className="flex flex-wrap gap-2">
+                        {buildCatalogFilterOptions(currentCatalogFilter, currentQuery).map(
+                          (option) => (
+                            <Link
+                              key={option.label}
+                              href={option.href}
+                              className={`inline-flex min-h-[3rem] items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                                option.isActive
+                                  ? "border-[var(--color-gold)] bg-[var(--color-gold)] text-[var(--color-plum-950)]"
+                                  : "border-[rgba(82,33,117,0.14)] bg-white text-[var(--color-plum-900)] hover:-translate-y-0.5 hover:border-[rgba(220,176,103,0.58)] hover:text-[var(--color-gold-deep)]"
+                              }`}
+                            >
+                              {option.label}
+                            </Link>
+                          ),
+                        )}
+                      </div>
+
+                      {currentCatalogFilter !== "ALL" ? (
+                        <input
+                          type="hidden"
+                          name="catalog"
+                          value={currentCatalogFilter}
+                        />
                       ) : null}
+
+                      <div className="flex w-full flex-col gap-3 sm:flex-row">
+                        <label className="flex-1">
+                          <span className="sr-only">Buscar fragancia</span>
+                          <div className="input-shell">
+                            <input
+                              name="q"
+                              type="search"
+                              defaultValue={currentQuery}
+                              className="w-full border-0 bg-transparent text-sm text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-soft)]"
+                              placeholder="Buscar por nombre, slug o resumen"
+                            />
+                          </div>
+                        </label>
+                        <button
+                          type="submit"
+                          className="inline-flex min-h-[3.2rem] items-center justify-center rounded-full bg-[var(--color-gold)] px-5 py-3 text-sm font-semibold text-[var(--color-plum-950)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-soft)]"
+                        >
+                          Buscar
+                        </button>
+                        {currentQuery ? (
+                          <Link
+                            href={buildAdminPageHref({
+                              catalog: currentCatalogFilter,
+                              page: 1,
+                              query: "",
+                            })}
+                            className="inline-flex min-h-[3.2rem] items-center justify-center rounded-full border border-[rgba(82,33,117,0.16)] bg-white px-5 py-3 text-sm font-semibold text-[var(--color-plum-900)] transition hover:-translate-y-0.5 hover:border-[rgba(220,176,103,0.58)] hover:text-[var(--color-gold-deep)]"
+                          >
+                            Limpiar
+                          </Link>
+                        ) : null}
+                      </div>
                     </Form>
                   </div>
                 </div>
 
-                {items.length === 0 ? (
+                {catalogScopedItems.length === 0 ? (
                   <div className="panel-card rounded-[1.75rem] p-6 text-sm leading-7 text-[var(--color-ink-soft)]">
-                    No hay fragancias guardadas todavía en Prisma. Puedes crear
+                    {getEmptyCatalogMessage(currentCatalogFilter)} Puedes crear
                     la primera desde el formulario de arriba.
                   </div>
                 ) : totalFilteredItems === 0 ? (
@@ -376,7 +444,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                       <details
                         key={item.id}
                         className="expandable-panel panel-card overflow-hidden rounded-[1.75rem]"
-                        open={normalizedFocus === item.slug}
+                        open={normalizedFocus === buildAdminFocusValue(item)}
                       >
                         <summary className="expandable-panel-summary cursor-pointer list-none px-5 py-5 sm:px-6">
                           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -385,6 +453,9 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
 
                               <div className="min-w-0">
                                 <div className="flex flex-wrap gap-2.5">
+                                  <span className="detail-chip w-fit bg-[rgba(220,176,103,0.14)] text-[var(--color-plum-900)]">
+                                    {getCatalogLabel(item.catalog)}
+                                  </span>
                                   <span className="detail-chip w-fit">
                                     {item.status === "ACTIVE"
                                       ? "Activo"
@@ -406,9 +477,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                                   {item.accords.length === 1 ? "" : "s"} ·{" "}
                                   {noteCount} note
                                   {noteCount === 1 ? "" : "s"} · imagen{" "}
-                                  {item.bottleAsset.kind === "custom"
-                                    ? "personalizada"
-                                    : "PDF"}
+                                  {resolveBottleAssetLabel(item.bottleAsset)}
                                 </p>
                               </div>
                             </div>
@@ -449,6 +518,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                     <div className="flex flex-wrap items-center gap-2">
                       <Link
                         href={buildAdminPageHref({
+                          catalog: currentCatalogFilter,
                           page: currentPage - 1,
                           query: currentQuery,
                         })}
@@ -463,6 +533,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                           <Link
                             key={`page-${pageNumber}`}
                             href={buildAdminPageHref({
+                              catalog: currentCatalogFilter,
                               page: pageNumber,
                               query: currentQuery,
                             })}
@@ -489,6 +560,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
 
                       <Link
                         href={buildAdminPageHref({
+                          catalog: currentCatalogFilter,
                           page: currentPage + 1,
                           query: currentQuery,
                         })}
@@ -613,6 +685,18 @@ function formatPriceSummary(item: CatalogItem) {
     .join(" · ");
 }
 
+function compareAdminItems(left: CatalogItem, right: CatalogItem) {
+  if (left.catalog !== right.catalog) {
+    return left.catalog.localeCompare(right.catalog);
+  }
+
+  if (left.sourcePage !== right.sourcePage) {
+    return left.sourcePage - right.sourcePage;
+  }
+
+  return left.fullName.localeCompare(right.fullName);
+}
+
 function filterAdminItems(items: AdminCatalogItem[], query: string) {
   if (!query) {
     return items;
@@ -641,6 +725,7 @@ function normalizeSearchParam(value: string | string[] | undefined) {
 
 function matchesAdminSearch(item: AdminCatalogItem, normalizedQuery: string) {
   const searchableValues = [
+    getCatalogLabel(item.catalog),
     item.fullName,
     item.slug,
     item.summary ?? "",
@@ -663,8 +748,20 @@ function parsePositiveInteger(value: string | undefined) {
   return Number.isInteger(parsedValue) && parsedValue > 0 ? parsedValue : null;
 }
 
-function buildAdminPageHref({ page, query }: { page: number; query: string }) {
+function buildAdminPageHref({
+  catalog,
+  page,
+  query,
+}: {
+  catalog: AdminCatalogFilter;
+  page: number;
+  query: string;
+}) {
   const searchParams = new URLSearchParams();
+
+  if (catalog !== "ALL") {
+    searchParams.set("catalog", catalog);
+  }
 
   if (query) {
     searchParams.set("q", query);
@@ -677,6 +774,64 @@ function buildAdminPageHref({ page, query }: { page: number; query: string }) {
   const queryString = searchParams.toString();
 
   return queryString ? `/admin?${queryString}` : "/admin";
+}
+
+function buildCatalogFilterOptions(
+  currentCatalogFilter: AdminCatalogFilter,
+  query: string,
+) {
+  return [
+    {
+      catalog: "ALL" as const,
+      label: "Todos",
+    },
+    {
+      catalog: "MEN" as const,
+      label: "Caballeros",
+    },
+    {
+      catalog: "WOMEN" as const,
+      label: "Damas",
+    },
+  ].map((option) => ({
+    ...option,
+    href: buildAdminPageHref({
+      catalog: option.catalog,
+      page: 1,
+      query,
+    }),
+    isActive: currentCatalogFilter === option.catalog,
+  }));
+}
+
+function matchesCatalogFilter(
+  catalog: CatalogType,
+  filter: AdminCatalogFilter,
+) {
+  return filter === "ALL" || catalog === filter;
+}
+
+function buildAdminFocusValue(item: Pick<CatalogItem, "catalog" | "slug">) {
+  return `${item.catalog}:${item.slug}`;
+}
+
+function resolveBottleAssetLabel(asset: BottleImageAsset) {
+  switch (asset.kind) {
+    case "custom":
+      return "personalizada";
+    case "pdf":
+      return "PDF";
+    case "placeholder":
+      return "placeholder";
+  }
+}
+
+function getEmptyCatalogMessage(filter: AdminCatalogFilter) {
+  if (filter === "ALL") {
+    return "No hay fragancias guardadas todavía en Prisma.";
+  }
+
+  return `No hay fragancias guardadas todavía en ${getCatalogLabel(filter).toLowerCase()}.`;
 }
 
 function getVisiblePageNumbers(currentPage: number, totalPages: number) {

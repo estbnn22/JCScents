@@ -15,6 +15,7 @@ datasource db {
 
 enum CatalogType {
   MEN
+  WOMEN
 }
 
 enum FragranceStatus {
@@ -26,9 +27,9 @@ model Fragrance {
   id          String          @id @default(cuid())
   catalog     CatalogType     @default(MEN)
   fullName    String
-  slug        String          @unique
+  slug        String
   rawText     String?
-  sourcePage  Int             @unique
+  sourcePage  Int
   status      FragranceStatus @default(ACTIVE)
   detailsCustomized Boolean   @default(false)
   imagePath   String?
@@ -44,6 +45,8 @@ model Fragrance {
   createdAt   DateTime        @default(now())
   updatedAt   DateTime        @updatedAt
 
+  @@unique([catalog, slug])
+  @@unique([catalog, sourcePage])
   @@index([catalog, status, sourcePage])
 }
 

@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { BottleImageAsset } from "@/lib/catalog-bottle";
+import type { CatalogType } from "@/lib/catalog-config";
+import {
+  buildCatalogCollectionHref,
+  buildCatalogItemHref,
+} from "@/lib/catalog-links";
 import type { CatalogItem } from "@/lib/catalog";
 
 export type StatusFilter = "all" | "ACTIVE" | "COMING_SOON";
@@ -55,6 +60,7 @@ function getPaginationTokens(
 }
 
 export function CatalogBrowser({
+  catalog,
   items,
   currentPage,
   query,
@@ -62,6 +68,7 @@ export function CatalogBrowser({
   totalPages,
   totalVisibleItems,
 }: {
+  catalog: CatalogType;
   items: CatalogBrowserItem[];
   currentPage: number;
   query: string;
@@ -81,6 +88,9 @@ export function CatalogBrowser({
           scroll={false}
           className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-5"
         >
+          {catalog !== "MEN" ? (
+            <input type="hidden" name="catalog" value={catalog} />
+          ) : null}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:flex-1">
             <label className="input-shell flex-1">
               <span className="sr-only">Buscar fragancia</span>
@@ -109,7 +119,8 @@ export function CatalogBrowser({
               return (
                 <Link
                   key={filter.value}
-                  href={buildCatalogHref({
+                  href={buildCatalogCollectionHref({
+                    catalog,
                     page: 1,
                     query,
                     status: filter.value,
@@ -137,7 +148,7 @@ export function CatalogBrowser({
 
       <div className="grid grid-cols-2 gap-4 sm:gap-7 xl:grid-cols-3">
         {items.map((item) => {
-          const isCustomBottle = item.bottleAsset.kind === "custom";
+          const usesNaturalBottleLayout = item.bottleAsset.kind !== "pdf";
           const startingPrice = Math.min(
             ...item.sizes.map((size) => size.price),
           );
@@ -146,7 +157,7 @@ export function CatalogBrowser({
           return (
             <Link
               key={item.id}
-              href={`/catalog/${item.slug}`}
+              href={buildCatalogItemHref(item.slug, catalog)}
               className="group block h-full"
             >
               <article
@@ -173,10 +184,12 @@ export function CatalogBrowser({
                         height={640}
                         unoptimized
                         className={`catalog-card-bottle-image ${
-                          isCustomBottle ? "catalog-card-bottle-image-custom" : ""
+                          usesNaturalBottleLayout
+                            ? "catalog-card-bottle-image-custom"
+                            : ""
                         }`}
                         style={
-                          isCustomBottle
+                          usesNaturalBottleLayout
                             ? undefined
                             : {
                                 transform: `translate(calc(${item.bottleTranslateX} + 24%), ${item.bottleTranslateY}) scale(${item.bottleScale})`,
@@ -280,7 +293,8 @@ export function CatalogBrowser({
               </span>
             ) : (
               <Link
-                href={buildCatalogHref({
+                href={buildCatalogCollectionHref({
+                  catalog,
                   page: currentPage - 1,
                   query,
                   status,
@@ -310,7 +324,8 @@ export function CatalogBrowser({
               return (
                 <Link
                   key={token}
-                  href={buildCatalogHref({
+                  href={buildCatalogCollectionHref({
+                    catalog,
                     page: token,
                     query,
                     status,
@@ -335,7 +350,8 @@ export function CatalogBrowser({
               </span>
             ) : (
               <Link
-                href={buildCatalogHref({
+                href={buildCatalogCollectionHref({
+                  catalog,
                   page: currentPage + 1,
                   query,
                   status,
@@ -351,33 +367,4 @@ export function CatalogBrowser({
       ) : null}
     </div>
   );
-}
-
-function buildCatalogHref({
-  page,
-  query,
-  status,
-}: {
-  page: number;
-  query: string;
-  status: StatusFilter;
-}) {
-  const searchParams = new URLSearchParams();
-  const normalizedQuery = query.trim();
-
-  if (normalizedQuery) {
-    searchParams.set("q", normalizedQuery);
-  }
-
-  if (status !== "all") {
-    searchParams.set("status", status);
-  }
-
-  if (page > 1) {
-    searchParams.set("page", String(page));
-  }
-
-  const queryString = searchParams.toString();
-
-  return queryString ? `/?${queryString}#catalogo` : "/#catalogo";
 }

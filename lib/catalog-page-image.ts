@@ -3,7 +3,11 @@ import { access, mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 
-import { menCatalogPdfPath } from "@/lib/catalog";
+import {
+  type CatalogType,
+  getCatalogPdfPath,
+  getCatalogRouteSegment,
+} from "@/lib/catalog-config";
 
 const execFileAsync = promisify(execFile);
 
@@ -12,8 +16,14 @@ const CLANG_CACHE_DIRECTORY = "/private/tmp/clang-module-cache";
 const IMAGE_WIDTH = 1400;
 const JPEG_QUALITY = 0.72;
 
-export async function getCatalogPageImageBuffer(pageNumber: number) {
-  const imagePath = path.join(CACHE_DIRECTORY, `page-${pageNumber}.jpg`);
+export async function getCatalogPageImageBuffer(
+  catalog: CatalogType,
+  pageNumber: number,
+) {
+  const imagePath = path.join(
+    CACHE_DIRECTORY,
+    `${getCatalogRouteSegment(catalog)}-page-${pageNumber}.jpg`,
+  );
 
   await mkdir(CACHE_DIRECTORY, { recursive: true });
   await mkdir(CLANG_CACHE_DIRECTORY, { recursive: true });
@@ -21,14 +31,28 @@ export async function getCatalogPageImageBuffer(pageNumber: number) {
   try {
     await access(imagePath);
   } catch {
-    await renderCatalogPageImage(pageNumber, imagePath);
+    await renderCatalogPageImage(catalog, pageNumber, imagePath);
   }
 
   return readFile(imagePath);
 }
 
-async function renderCatalogPageImage(pageNumber: number, outputPath: string) {
-  await access(menCatalogPdfPath);
+export async function getMenCatalogPageImageBuffer(pageNumber: number) {
+  return getCatalogPageImageBuffer("MEN", pageNumber);
+}
+
+async function renderCatalogPageImage(
+  catalog: CatalogType,
+  pageNumber: number,
+  outputPath: string,
+) {
+  const pdfPath = getCatalogPdfPath(catalog);
+
+  if (!pdfPath) {
+    throw new Error(`No PDF path is configured for the ${catalog} catalog.`);
+  }
+
+  await access(pdfPath);
 
   const swiftScript = `
 import Foundation
@@ -37,7 +61,7 @@ import CoreGraphics
 import ImageIO
 import UniformTypeIdentifiers
 
-let pdfPath = "${escapeSwiftString(menCatalogPdfPath)}"
+let pdfPath = "${escapeSwiftString(pdfPath)}"
 let outputPath = "${escapeSwiftString(outputPath)}"
 let targetPage = ${pageNumber}
 let maxWidth: CGFloat = ${IMAGE_WIDTH}

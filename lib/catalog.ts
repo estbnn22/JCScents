@@ -1,4 +1,4 @@
-import catalogSeed from "@/data/men-catalog.json";
+import menCatalogSeed from "@/data/men-catalog.json";
 import {
   buildAccords,
   type FragranceAccord,
@@ -6,9 +6,11 @@ import {
   type FragranceSeason,
   resolveMenCatalogDetails,
 } from "@/data/men-catalog-details";
-
-const DEFAULT_MEN_CATALOG_PDF_PATH =
-  "/Users/estebanmachuca/Library/Mobile Documents/com~apple~CloudDocs/Downloads/JCScents Men Catalogo.pdf";
+import womenCatalogSeed from "@/data/women-catalog.json";
+import {
+  type CatalogType,
+  getCatalogPdfPath,
+} from "@/lib/catalog-config";
 
 type SeedFragrance = {
   sourcePage: number;
@@ -26,6 +28,7 @@ export type CatalogItem = {
   bottleScale: number;
   bottleTranslateX: string;
   bottleTranslateY: string;
+  catalog: CatalogType;
   detailsReady: boolean;
   id: string;
   fullName: string;
@@ -49,6 +52,8 @@ export type CatalogItem = {
   }>;
 };
 
+type CatalogDataSource = "database" | "seed";
+
 type DetailOverrides = {
   accordNames?: string[];
   accordStrengths?: number[];
@@ -61,33 +66,35 @@ type DetailOverrides = {
   topNotes?: string[];
 };
 
-export const menCatalogPdfPath =
-  process.env.CATALOG_PDF_PATH ?? DEFAULT_MEN_CATALOG_PDF_PATH;
+const seedCatalogByType: Record<CatalogType, SeedFragrance[]> = {
+  MEN: menCatalogSeed as SeedFragrance[],
+  WOMEN: womenCatalogSeed as SeedFragrance[],
+};
 
-const staticCatalog: CatalogItem[] = (catalogSeed as SeedFragrance[]).map((item) => ({
-  id: item.slug,
-  fullName: item.fullName,
-  imagePath: null,
-  slug: item.slug,
-  sourcePage: item.sourcePage,
-  rawText: item.rawText,
-  status: item.status,
-  sizes: item.sizes.map((size) => ({
-    sizeMl: size.sizeMl,
-    price: Number(size.price),
-  })),
-  ...resolveCatalogDetails(item),
-}));
+const staticCatalogByType: Record<CatalogType, CatalogItem[]> = {
+  MEN: buildStaticCatalog("MEN"),
+  WOMEN: buildStaticCatalog("WOMEN"),
+};
 
-export function getStaticMenCatalogItems(): CatalogItem[] {
-  return staticCatalog;
+export const menCatalogPdfPath = getCatalogPdfPath("MEN");
+
+export function getStaticCatalogItems(catalog: CatalogType): CatalogItem[] {
+  return staticCatalogByType[catalog];
 }
 
-export async function getMenCatalogItems(): Promise<CatalogItem[]> {
+export function getStaticMenCatalogItems(): CatalogItem[] {
+  return getStaticCatalogItems("MEN");
+}
+
+export function getStaticWomenCatalogItems(): CatalogItem[] {
+  return getStaticCatalogItems("WOMEN");
+}
+
+export async function getCatalogItems(catalog: CatalogType): Promise<CatalogItem[]> {
   const { prisma } = await import("@/lib/prisma");
   const fragrances = await prisma.fragrance.findMany({
     where: {
-      catalog: "MEN",
+      catalog,
     },
     include: {
       sizes: {
@@ -106,6 +113,7 @@ export async function getMenCatalogItems(): Promise<CatalogItem[]> {
 
   return fragrances.map((fragrance: FragranceRecord) => ({
     id: fragrance.id,
+    catalog: fragrance.catalog as CatalogType,
     fullName: fragrance.fullName,
     imagePath: fragrance.imagePath ?? null,
     slug: fragrance.slug,
@@ -116,7 +124,7 @@ export async function getMenCatalogItems(): Promise<CatalogItem[]> {
       sizeMl: size.sizeMl,
       price: Number(size.price),
     })),
-    ...resolveCatalogDetails({
+    ...resolveCatalogDetails(catalog, {
       detailOverrides: {
         accordNames: fragrance.accordNames,
         accordStrengths: fragrance.accordStrengths,
@@ -135,13 +143,21 @@ export async function getMenCatalogItems(): Promise<CatalogItem[]> {
   }));
 }
 
-export async function loadMenCatalogItems() {
-  let items = getStaticMenCatalogItems();
-  let dataSource: "database" | "pdf" = "pdf";
+export async function getMenCatalogItems(): Promise<CatalogItem[]> {
+  return getCatalogItems("MEN");
+}
+
+export async function getWomenCatalogItems(): Promise<CatalogItem[]> {
+  return getCatalogItems("WOMEN");
+}
+
+export async function loadCatalogItems(catalog: CatalogType) {
+  let items = getStaticCatalogItems(catalog);
+  let dataSource: CatalogDataSource = "seed";
   let loadError: string | null = null;
 
   try {
-    const databaseItems = await getMenCatalogItems();
+    const databaseItems = await getCatalogItems(catalog);
     if (databaseItems.length > 0) {
       items = databaseItems;
       dataSource = "database";
@@ -158,8 +174,16 @@ export async function loadMenCatalogItems() {
   };
 }
 
-export async function getMenCatalogItemBySlug(slug: string) {
-  const { items, dataSource, loadError } = await loadMenCatalogItems();
+export async function loadMenCatalogItems() {
+  return loadCatalogItems("MEN");
+}
+
+export async function loadWomenCatalogItems() {
+  return loadCatalogItems("WOMEN");
+}
+
+export async function getCatalogItemBySlug(catalog: CatalogType, slug: string) {
+  const { items, dataSource, loadError } = await loadCatalogItems(catalog);
   const itemIndex = items.findIndex((entry) => entry.slug === slug);
   const item = itemIndex >= 0 ? items[itemIndex] : null;
 
@@ -172,13 +196,58 @@ export async function getMenCatalogItemBySlug(slug: string) {
   };
 }
 
-function resolveCatalogDetails(input: {
-  detailOverrides?: DetailOverrides;
-  slug: string;
-  fullName?: string;
-  rawText?: string;
-}) {
-  const entry = resolveMenCatalogDetails(input);
+export async function getMenCatalogItemBySlug(slug: string) {
+  return getCatalogItemBySlug("MEN", slug);
+}
+
+export async function getWomenCatalogItemBySlug(slug: string) {
+  return getCatalogItemBySlug("WOMEN", slug);
+}
+
+function buildStaticCatalog(catalog: CatalogType): CatalogItem[] {
+  return seedCatalogByType[catalog].map((item) => ({
+    id: item.slug,
+    catalog,
+    fullName: item.fullName,
+    imagePath: null,
+    slug: item.slug,
+    sourcePage: item.sourcePage,
+    rawText: item.rawText,
+    status: item.status,
+    sizes: item.sizes.map((size) => ({
+      sizeMl: size.sizeMl,
+      price: Number(size.price),
+    })),
+    ...resolveCatalogDetails(catalog, item),
+  }));
+}
+
+function resolveCatalogDetails(
+  catalog: CatalogType,
+  input: {
+    detailOverrides?: DetailOverrides;
+    slug: string;
+    fullName?: string;
+    rawText?: string;
+  },
+) {
+  const entry =
+    catalog === "MEN"
+      ? resolveMenCatalogDetails(input)
+      : {
+          accords: [],
+          bottleScale: 1.56,
+          bottleTranslateX: "-22%",
+          bottleTranslateY: "10%",
+          moments: [],
+          notes: {
+            base: [],
+            middle: [],
+            top: [],
+          },
+          seasons: [],
+          summary: null,
+        };
   const hasCustomDetails = input.detailOverrides?.enabled ?? false;
   const hasDatabaseDetails = Boolean(input.detailOverrides);
   const summary = hasCustomDetails

@@ -1,12 +1,21 @@
+import Form from "next/form";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   CatalogBrowser,
   ITEMS_PER_PAGE,
   type StatusFilter,
 } from "@/app/_components/catalog-browser";
+import { MobileHeroNav } from "@/app/_components/mobile-hero-nav";
 import { resolveBottleImageAsset } from "@/lib/catalog-bottle";
-import { loadMenCatalogItems } from "@/lib/catalog";
+import {
+  type CatalogType,
+  defaultCatalogType,
+  parseCatalogType,
+} from "@/lib/catalog-config";
+import { buildCatalogCollectionHref } from "@/lib/catalog-links";
+import { loadCatalogItems } from "@/lib/catalog";
 import { siteContactLinks } from "@/lib/site-contact-links";
 import heroImage from "@/public/jcHero.png";
 
@@ -14,6 +23,7 @@ export const dynamic = "force-dynamic";
 
 type PageProps = {
   searchParams: Promise<{
+    catalog?: string | string[];
     page?: string | string[];
     q?: string | string[];
     status?: string | string[];
@@ -21,8 +31,10 @@ type PageProps = {
 };
 
 export default async function Page({ searchParams }: PageProps) {
-  const { page, q, status } = await searchParams;
-  const { items } = await loadMenCatalogItems();
+  const { catalog, page, q, status } = await searchParams;
+  const selectedCatalog =
+    parseCatalogType(normalizeSearchParam(catalog)) ?? defaultCatalogType;
+  const { items } = await loadCatalogItems(selectedCatalog);
   const currentQuery = normalizeSearchParam(q).trim();
   const currentStatus = normalizeStatusFilter(normalizeSearchParam(status));
   const filteredItems = items.filter((item) => {
@@ -47,6 +59,7 @@ export default async function Page({ searchParams }: PageProps) {
     paginatedItems.map(async (item) => ({
       ...item,
       bottleAsset: await resolveBottleImageAsset(
+        item.catalog,
         item.slug,
         item.sourcePage,
         item.imagePath,
@@ -85,29 +98,39 @@ export default async function Page({ searchParams }: PageProps) {
         <div className="hero-aura absolute bottom-[-8rem] right-[-4rem] h-96 w-96 rounded-full [animation-delay:1.3s]" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-8 text-center sm:px-6 sm:py-12 lg:px-10 lg:py-16">
-          <nav className="fade-in-up flex w-full max-w-5xl flex-col items-center gap-6 border-b border-white/12 pb-8 sm:pb-10">
-            <div className="space-y-3">
-              <p className="font-display text-[2.8rem] tracking-[0.14em] text-[var(--color-gold-soft)] sm:text-[3.85rem] lg:text-[4.65rem]">
-                JC Scents
-              </p>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/62 sm:text-sm sm:tracking-[0.34em]">
-                Catálogo para caballeros
-              </p>
-              <ul className="grid grid-cols-2 gap-3 pt-2 sm:flex sm:flex-wrap sm:justify-center">
-                {siteContactLinks.map((link) => (
-                  <li key={link.label}>
-                    {"href" in link ? (
-                      <a href={link.href} className="footer-link">
-                        {link.label}
-                      </a>
-                    ) : (
-                      <span className="footer-link">{link.label}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </nav>
+          <div className="fade-in-up flex w-full max-w-6xl flex-col gap-6 border-b border-white/12 pb-8 text-left sm:pb-10">
+            <MobileHeroNav
+              currentQuery={currentQuery}
+              currentStatus={currentStatus}
+              selectedCatalog={selectedCatalog}
+            />
+
+            <nav className="hidden flex-col gap-6 sm:flex">
+              <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+                <div className="space-y-3 text-center lg:text-left">
+                  <p className="font-display text-[2.8rem] tracking-[0.14em] text-[var(--color-gold-soft)] sm:text-[3.85rem] lg:text-[4.65rem]">
+                    JC Scents
+                  </p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/62 sm:text-sm sm:tracking-[0.34em]">
+                    Catálogo de fragancias
+                  </p>
+                </div>
+
+                <div className="w-full max-w-3xl rounded-[1.9rem] border border-white/12 bg-white/8 p-4 shadow-[0_22px_60px_rgba(20,6,33,0.22)] backdrop-blur-[8px] sm:p-5">
+                  <div className="flex flex-col gap-4">
+                    <CatalogToggleLinks selectedCatalog={selectedCatalog} />
+                    <CatalogSearchForm
+                      currentQuery={currentQuery}
+                      currentStatus={currentStatus}
+                      selectedCatalog={selectedCatalog}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <ContactLinkList />
+            </nav>
+          </div>
 
           <div className="mt-10 flex w-full max-w-5xl flex-col items-center gap-8 sm:mt-14 sm:gap-10 lg:mt-[4.5rem]">
             <div className="fade-in-up space-y-6 rounded-[2rem] border border-white/10 bg-white/7 px-4 py-6 shadow-[0_26px_70px_rgba(20,6,33,0.2)] backdrop-blur-[6px] sm:rounded-[2.5rem] sm:px-8 sm:py-8 lg:px-10 lg:py-10">
@@ -173,13 +196,14 @@ export default async function Page({ searchParams }: PageProps) {
           <div className="max-w-3xl space-y-3">
             <p className="section-label">Colección</p>
             <h2 className="font-display text-3xl leading-tight text-[var(--color-plum-900)] sm:text-4xl lg:text-5xl">
-              Catálogo de caballeros
+              Catálogo de fragancias
             </h2>
           </div>
         </div>
 
         <div className="mt-8 sm:mt-10">
           <CatalogBrowser
+            catalog={selectedCatalog}
             items={itemsWithBottleAssets}
             currentPage={currentPage}
             query={currentQuery}
@@ -190,6 +214,125 @@ export default async function Page({ searchParams }: PageProps) {
         </div>
       </section>
     </main>
+  );
+}
+
+type HeroNavProps = {
+  currentQuery: string;
+  currentStatus: StatusFilter;
+  selectedCatalog: CatalogType;
+};
+
+function CatalogToggleLinks({
+  selectedCatalog,
+  mobile = false,
+}: {
+  selectedCatalog: CatalogType;
+  mobile?: boolean;
+}) {
+  return (
+    <div
+      className={
+        mobile
+          ? "grid grid-cols-1 gap-2.5 min-[360px]:grid-cols-2"
+          : "flex flex-wrap gap-2.5"
+      }
+    >
+      {([
+        { value: "MEN", label: "Men Catalog" },
+        { value: "WOMEN", label: "Women Catalog" },
+      ] as const).map((option) => {
+        const isActive = option.value === selectedCatalog;
+
+        return (
+          <Link
+            key={option.value}
+            href={buildCatalogCollectionHref({
+              catalog: option.value,
+              page: 1,
+              query: "",
+              status: "all",
+            })}
+            scroll={false}
+            className={`inline-flex min-h-[3rem] items-center justify-center rounded-full border px-5 py-3 text-center text-sm font-semibold transition ${
+              isActive
+                ? "border-[var(--color-gold)] bg-[var(--color-gold)] text-[var(--color-plum-950)]"
+                : "border-white/14 bg-white/7 text-white hover:-translate-y-0.5 hover:border-[var(--color-gold-soft)] hover:text-[var(--color-gold-soft)]"
+            }`}
+          >
+            {option.label}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+function CatalogSearchForm({
+  currentQuery,
+  currentStatus,
+  selectedCatalog,
+  mobile = false,
+}: HeroNavProps & {
+  mobile?: boolean;
+}) {
+  return (
+    <Form
+      action="/#catalogo"
+      scroll={false}
+      className={`flex flex-col gap-3 ${mobile ? "" : "sm:flex-row sm:items-center"}`}
+    >
+      {selectedCatalog !== defaultCatalogType ? (
+        <input type="hidden" name="catalog" value={selectedCatalog} />
+      ) : null}
+      {currentStatus !== "all" ? (
+        <input type="hidden" name="status" value={currentStatus} />
+      ) : null}
+      <label className="flex-1 rounded-full border border-white/12 bg-white/9 px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
+        <span className="sr-only">Buscar perfumes o colognes</span>
+        <input
+          type="search"
+          name="q"
+          defaultValue={currentQuery}
+          placeholder="Buscar perfumes, colognes o marcas..."
+          className="w-full border-0 bg-transparent text-sm text-white outline-none placeholder:text-white/52"
+        />
+      </label>
+      <button
+        type="submit"
+        className={`inline-flex min-h-[3.25rem] items-center justify-center rounded-full bg-[var(--color-gold)] px-6 py-3 text-sm font-semibold text-[var(--color-plum-950)] shadow-[0_14px_32px_rgba(20,6,33,0.22)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-soft)] ${
+          mobile ? "w-full" : ""
+        }`}
+      >
+        Search
+      </button>
+    </Form>
+  );
+}
+
+function ContactLinkList({ mobile = false }: { mobile?: boolean }) {
+  return (
+    <div className={mobile ? "space-y-3" : "space-y-3 text-center"}>
+      <ul
+        className={
+          mobile
+            ? "grid grid-cols-1 gap-2.5 min-[380px]:grid-cols-2"
+            : "grid grid-cols-2 gap-3 pt-2 sm:flex sm:flex-wrap sm:justify-center"
+        }
+      >
+        {siteContactLinks.map((link) => (
+          <li key={link.label}>
+            {"href" in link ? (
+              <a href={link.href} className="footer-link">
+                {link.label}
+              </a>
+            ) : (
+              <span className="footer-link">{link.label}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

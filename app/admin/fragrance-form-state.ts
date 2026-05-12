@@ -2,6 +2,7 @@ export type FragranceFormFieldName =
   | "accordNames"
   | "baseNotes"
   | "bottleImage"
+  | "catalog"
   | "fullName"
   | "middleNotes"
   | "moments"

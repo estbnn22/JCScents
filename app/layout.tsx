@@ -4,9 +4,9 @@ import { SiteFooter } from "@/app/_components/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JC Scents | Catálogo de Caballeros",
+  title: "JC Scents | Catálogos de Perfumes y Colognes",
   description:
-    "Catálogo de fragancias para caballeros con datos listos para Prisma, búsqueda y precios por tamaño.",
+    "Catálogos de fragancias para caballeros y damas con búsqueda y precios por tamaño.",
 };
 
 export default function RootLayout({

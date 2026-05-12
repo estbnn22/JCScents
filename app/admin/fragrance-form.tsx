@@ -11,9 +11,15 @@ import {
 
 import {
   getDefaultAccordStrength,
+  normalizeAccordLabel,
   supportedAccordNames,
 } from "@/data/men-catalog-details";
+import type { BottleImageAsset } from "@/lib/catalog-bottle";
 import type { CatalogItem } from "@/lib/catalog";
+import {
+  defaultCatalogType,
+  type CatalogType,
+} from "@/lib/catalog-config";
 
 import {
   emptyFragranceFormState,
@@ -41,13 +47,11 @@ const ACCORD_STRENGTH_MIN = 0;
 const ACCORD_STRENGTH_MAX = 100;
 
 type AdminCatalogItem = CatalogItem & {
-  bottleAsset: {
-    kind: "custom" | "pdf";
-    src: string;
-  };
+  bottleAsset: BottleImageAsset;
 };
 
 type AdminListState = {
+  catalog: CatalogType | "ALL";
   page: number;
   query: string;
 };
@@ -64,6 +68,7 @@ type SelectedAccord = {
 
 export function FragranceForm({
   action,
+  defaultCatalog = defaultCatalogType,
   deleteAction,
   formId,
   item,
@@ -71,6 +76,7 @@ export function FragranceForm({
   submitLabel,
 }: {
   action: FragranceFormAction;
+  defaultCatalog?: CatalogType;
   deleteAction?: (formData: FormData) => void | Promise<void>;
   formId: string;
   item?: AdminCatalogItem;
@@ -90,6 +96,39 @@ export function FragranceForm({
     selectedAccords,
     deferredAccordSearch,
   );
+  const customAccordCandidate = normalizeAccordLabel(accordSearch);
+  const canAddCustomAccord =
+    customAccordCandidate.length > 0 &&
+    !containsAccordName(selectedAccords, customAccordCandidate) &&
+    !supportedAccordNames.includes(
+      customAccordCandidate as (typeof supportedAccordNames)[number],
+    );
+
+  function addAccord(name: string) {
+    const normalizedName = normalizeAccordLabel(name);
+
+    if (!normalizedName) {
+      return;
+    }
+
+    setSelectedAccords((currentAccords) => {
+      if (
+        currentAccords.length >= MAX_ACCORDS ||
+        containsAccordName(currentAccords, normalizedName)
+      ) {
+        return currentAccords;
+      }
+
+      return [
+        ...currentAccords,
+        {
+          name: normalizedName,
+          strength: getDefaultAccordStrength(currentAccords.length),
+        },
+      ];
+    });
+    setAccordSearch("");
+  }
 
   return (
     <div className="mt-6 space-y-4">
@@ -117,6 +156,27 @@ export function FragranceForm({
         ) : null}
 
         <div className="grid gap-5 lg:grid-cols-2">
+          <Field
+            error={state.fieldErrors.catalog}
+            errorId={buildErrorId(formId, "catalog")}
+            label="Catálogo"
+          >
+            <select
+              aria-describedby={buildAriaDescribedBy(
+                formId,
+                "catalog",
+                state.fieldErrors.catalog,
+              )}
+              aria-invalid={Boolean(state.fieldErrors.catalog)}
+              name="catalog"
+              defaultValue={item?.catalog ?? defaultCatalog}
+              className={getSelectClassName(Boolean(state.fieldErrors.catalog))}
+            >
+              <option value="MEN">Caballeros</option>
+              <option value="WOMEN">Damas</option>
+            </select>
+          </Field>
+
           <Field
             error={state.fieldErrors.fullName}
             errorId={buildErrorId(formId, "fullName")}
@@ -309,7 +369,7 @@ export function FragranceForm({
         <Field
           error={state.fieldErrors.accordNames}
           errorId={buildErrorId(formId, "accordNames")}
-          hint="Busca y selecciona hasta 10 accords. El orden seleccionado define la intensidad visual."
+          hint="Busca y selecciona hasta 10 accords. Si no existe uno, puedes agregarlo manualmente. El orden seleccionado define la intensidad visual."
           label="Main Accords"
         >
           <div
@@ -335,6 +395,17 @@ export function FragranceForm({
                 />
               </div>
 
+              {canAddCustomAccord ? (
+                <button
+                  type="button"
+                  onClick={() => addAccord(customAccordCandidate)}
+                  disabled={selectedAccords.length >= MAX_ACCORDS}
+                  className="mt-3 inline-flex min-h-[2.9rem] items-center justify-center rounded-full border border-[rgba(82,33,117,0.14)] bg-white px-4 py-2 text-sm font-semibold text-[var(--color-plum-900)] transition hover:-translate-y-0.5 hover:border-[rgba(220,176,103,0.58)] disabled:cursor-not-allowed disabled:opacity-45 disabled:hover:translate-y-0"
+                >
+                  {`Agregar "${customAccordCandidate}" como accord personalizado`}
+                </button>
+              ) : null}
+
               <div className="mt-4 max-h-[24rem] overflow-y-auto rounded-[1.3rem] border border-[rgba(82,33,117,0.08)] bg-[rgba(255,255,255,0.56)] p-3">
                 {filteredAccords.length > 0 ? (
                   <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -353,11 +424,7 @@ export function FragranceForm({
                           disabled={hasReachedLimit}
                           onClick={() => {
                             setSelectedAccords((currentAccords) => {
-                              if (
-                                currentAccords.some(
-                                  (currentAccord) => currentAccord.name === accord,
-                                )
-                              ) {
+                              if (containsAccordName(currentAccords, accord)) {
                                 return currentAccords.filter(
                                   (currentAccord) => currentAccord.name !== accord,
                                 );
@@ -370,7 +437,7 @@ export function FragranceForm({
                               return [
                                 ...currentAccords,
                                 {
-                                  name: accord,
+                                  name: normalizeAccordLabel(accord),
                                   strength: getDefaultAccordStrength(
                                     currentAccords.length,
                                   ),
@@ -622,6 +689,9 @@ function AdminListStateFields({ listState }: { listState: AdminListState }) {
       {listState.query ? (
         <input type="hidden" name="redirectQuery" value={listState.query} />
       ) : null}
+      {listState.catalog !== "ALL" ? (
+        <input type="hidden" name="redirectCatalog" value={listState.catalog} />
+      ) : null}
       {listState.page > 1 ? (
         <input
           type="hidden"
@@ -655,7 +725,9 @@ function BottleAssetPreview({
         <p className="text-sm font-semibold text-[var(--color-plum-900)]">
           {asset.kind === "custom"
             ? "Imagen personalizada activa"
-            : "Fallback del PDF"}
+            : asset.kind === "pdf"
+              ? "Fallback del PDF"
+              : "Placeholder del catalogo"}
         </p>
         <p className="text-xs leading-6 text-[var(--color-ink-soft)]">
           {asset.src}
@@ -756,7 +828,7 @@ function getInitialAccords(item: CatalogItem | undefined): SelectedAccord[] {
   }
 
   return item.accords.map((accord, index) => ({
-    name: accord.name,
+    name: normalizeAccordLabel(accord.name),
     strength: normalizeAccordStrengthValue(
       accord.strength,
       getDefaultAccordStrength(index),
@@ -770,14 +842,23 @@ function getFilteredAccords(selectedAccords: SelectedAccord[], search: string) {
     ...selectedAccords.map((accord) => accord.name),
     ...supportedAccordNames.filter(
       (accord) =>
-        !selectedAccords.some(
-          (selectedAccord) => selectedAccord.name === accord,
-        ),
+        !containsAccordName(selectedAccords, accord),
     ),
   ];
 
   return orderedAccords.filter((accord) =>
     normalizedSearch ? accord.includes(normalizedSearch) : true,
+  );
+}
+
+function containsAccordName(
+  accords: SelectedAccord[],
+  accordName: string,
+) {
+  const normalizedAccordName = normalizeAccordLabel(accordName);
+
+  return accords.some(
+    (selectedAccord) => selectedAccord.name === normalizedAccordName,
   );
 }
 
