@@ -895,11 +895,17 @@ function BottleAssetPreview({
               : "Placeholder del catalogo"}
         </p>
         <p className="text-xs leading-6 text-[var(--color-ink-soft)]">
-          {asset.src}
+          {describeBottleAssetSource(asset)}
         </p>
       </div>
     </div>
   );
+}
+
+function describeBottleAssetSource(asset: AdminCatalogItem["bottleAsset"]) {
+  return asset.src.startsWith("data:image/")
+    ? "Imagen personalizada guardada desde el panel admin."
+    : asset.src;
 }
 
 function Field({

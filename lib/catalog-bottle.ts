@@ -11,6 +11,7 @@ import {
 const BOTTLE_EXTENSIONS = [".png", ".jpg", ".jpeg", ".webp", ".avif"] as const;
 const BOTTLE_DIRECTORY = path.join(process.cwd(), "public", "bottles");
 const BOTTLE_PUBLIC_PREFIX = "/bottles/";
+const INLINE_BOTTLE_IMAGE_PREFIX = "data:image/";
 
 export type BottleImageAsset = {
   kind: "custom" | "pdf" | "placeholder";
@@ -23,7 +24,7 @@ export async function resolveBottleImageAsset(
   sourcePage: number,
   preferredPath?: string | null,
 ): Promise<BottleImageAsset> {
-  const normalizedPreferredPath = normalizeBottlePublicPath(preferredPath);
+  const normalizedPreferredPath = normalizeStoredBottleImagePath(preferredPath);
 
   if (normalizedPreferredPath) {
     return {
@@ -137,6 +138,54 @@ export function normalizeBottlePublicPath(publicPath: string | null | undefined)
   }
 
   return `${BOTTLE_PUBLIC_PREFIX}${segments.join("/")}`;
+}
+
+export function normalizeStoredBottleImagePath(
+  value: string | null | undefined,
+) {
+  const normalizedPublicPath = normalizeBottlePublicPath(value);
+
+  if (normalizedPublicPath) {
+    return normalizedPublicPath;
+  }
+
+  return normalizeInlineBottleImageDataUrl(value);
+}
+
+function normalizeInlineBottleImageDataUrl(value: string | null | undefined) {
+  if (!value) {
+    return null;
+  }
+
+  const trimmedValue = value.trim();
+
+  if (!trimmedValue.startsWith(INLINE_BOTTLE_IMAGE_PREFIX)) {
+    return null;
+  }
+
+  const metadataSeparatorIndex = trimmedValue.indexOf(",");
+
+  if (metadataSeparatorIndex <= INLINE_BOTTLE_IMAGE_PREFIX.length) {
+    return null;
+  }
+
+  const metadata = trimmedValue.slice(0, metadataSeparatorIndex).toLowerCase();
+
+  if (!metadata.endsWith(";base64")) {
+    return null;
+  }
+
+  const mimeType = metadata.slice("data:".length, metadata.length - ";base64".length);
+
+  switch (mimeType) {
+    case "image/avif":
+    case "image/jpeg":
+    case "image/png":
+    case "image/webp":
+      return trimmedValue;
+    default:
+      return null;
+  }
 }
 
 async function findCustomBottleEntriesBySlug(catalog: CatalogType, slug: string) {

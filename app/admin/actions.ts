@@ -25,6 +25,7 @@ import {
   getBottleAbsolutePathFromPublicPath,
   isSupportedBottleExtension,
   normalizeBottlePublicPath,
+  normalizeStoredBottleImagePath,
 } from "@/lib/catalog-bottle";
 import { catalogTypes, parseCatalogType, type CatalogType } from "@/lib/catalog-config";
 import { prisma, type PrismaTransactionClient } from "@/lib/prisma";
@@ -36,6 +37,7 @@ import {
 } from "./fragrance-form-state";
 
 const MAX_BOTTLE_IMAGE_BYTES = 8 * 1024 * 1024;
+const BOTTLE_IMAGE_STORAGE_MODES = ["auto", "filesystem", "inline"] as const;
 const VALID_MOMENTS = new Set<FragranceMoment>(["day", "night"]);
 const VALID_SEASONS = new Set<FragranceSeason>([
   "spring",
@@ -676,7 +678,9 @@ async function prepareBottleImageChange(input: {
       }
     | { error: string }
   > {
-  const normalizedExistingPath = normalizeBottlePublicPath(input.existingImagePath);
+  const normalizedExistingPath = normalizeStoredBottleImagePath(
+    input.existingImagePath,
+  );
   const uploadedFile = input.uploadedFile;
 
   if (uploadedFile && uploadedFile.size > 0) {
@@ -693,7 +697,8 @@ async function prepareBottleImageChange(input: {
     return {
       nextImagePath: persistedUpload.imagePath,
       obsoleteImagePath:
-        normalizedExistingPath && normalizedExistingPath !== persistedUpload.imagePath
+        normalizeBottlePublicPath(normalizedExistingPath) &&
+        normalizedExistingPath !== persistedUpload.imagePath
           ? normalizedExistingPath
           : null,
       uploadedImagePath: persistedUpload.imagePath,
@@ -728,24 +733,77 @@ async function persistBottleImageUpload(
     return { error: "image-too-large" };
   }
 
-  const extension = resolveBottleFileExtension(uploadedFile);
+  const fileMetadata = resolveBottleFileMetadata(uploadedFile);
 
-  if (!extension) {
+  if (!fileMetadata) {
     return { error: "unsupported-image-type" };
   }
-  const imagePath = buildBottleImagePublicPath(catalog, slug, extension);
+
+  let fileBuffer: Buffer;
+
+  try {
+    fileBuffer = Buffer.from(await uploadedFile.arrayBuffer());
+  } catch (error) {
+    console.error("persistBottleImageUpload failed to read file", error);
+    return { error: "invalid-image-file" };
+  }
+
+  const storageMode = resolveBottleImageStorageMode();
+
+  if (storageMode === "inline") {
+    return {
+      imagePath: buildInlineBottleImageDataUrl(fileMetadata.mimeType, fileBuffer),
+    };
+  }
+
+  const persistedFile = await persistBottleImageToFilesystem({
+    catalog,
+    fileBuffer,
+    fileExtension: fileMetadata.extension,
+    slug,
+  });
+
+  if (persistedFile) {
+    return persistedFile;
+  }
+
+  if (storageMode === "filesystem") {
+    return { error: "image-storage-failed" };
+  }
+
+  return {
+    imagePath: buildInlineBottleImageDataUrl(fileMetadata.mimeType, fileBuffer),
+  };
+}
+
+async function persistBottleImageToFilesystem(input: {
+  catalog: CatalogType;
+  fileBuffer: Buffer;
+  fileExtension: string;
+  slug: string;
+}) {
+  const imagePath = buildBottleImagePublicPath(
+    input.catalog,
+    input.slug,
+    input.fileExtension,
+  );
   const absolutePath = getBottleAbsolutePathFromPublicPath(imagePath);
 
   if (!absolutePath) {
-    return { error: "unsupported-image-type" };
+    return null;
   }
 
-  await mkdir(path.dirname(absolutePath), { recursive: true });
-  await writeFile(absolutePath, Buffer.from(await uploadedFile.arrayBuffer()));
+  try {
+    await mkdir(path.dirname(absolutePath), { recursive: true });
+    await writeFile(absolutePath, input.fileBuffer);
 
-  return {
-    imagePath,
-  };
+    return {
+      imagePath,
+    };
+  } catch (error) {
+    console.error("persistBottleImageToFilesystem failed", error);
+    return null;
+  }
 }
 
 async function cleanupBottlePublicPath(publicPath: string | null) {
@@ -860,6 +918,12 @@ function resolveFragranceFieldError(error: string): {
         field: "bottleImage",
         message: "La imagen pesa demasiado. Usa un archivo de hasta 8MB.",
       };
+    case "image-storage-failed":
+      return {
+        field: "bottleImage",
+        message:
+          "No se pudo guardar la imagen en el servidor. Intenta de nuevo o usa una imagen mas ligera.",
+      };
     case "invalid-source-page":
       return {
         field: "sourcePage",
@@ -920,11 +984,21 @@ function slugify(value: string) {
     .replace(/^-+|-+$/g, "");
 }
 
-function resolveBottleFileExtension(file: File) {
+function resolveBottleFileMetadata(file: File) {
   const fileNameExtension = path.extname(file.name).toLowerCase();
+  const extensionToMimeType: Record<string, string> = {
+    ".avif": "image/avif",
+    ".jpeg": "image/jpeg",
+    ".jpg": "image/jpeg",
+    ".png": "image/png",
+    ".webp": "image/webp",
+  };
 
   if (isSupportedBottleExtension(fileNameExtension)) {
-    return fileNameExtension;
+    return {
+      extension: fileNameExtension,
+      mimeType: extensionToMimeType[fileNameExtension] ?? file.type,
+    };
   }
 
   const mimeTypeToExtension: Record<string, string> = {
@@ -936,6 +1010,23 @@ function resolveBottleFileExtension(file: File) {
   const mimeTypeExtension = mimeTypeToExtension[file.type];
 
   return mimeTypeExtension && isSupportedBottleExtension(mimeTypeExtension)
-    ? mimeTypeExtension
+    ? {
+        extension: mimeTypeExtension,
+        mimeType: file.type,
+      }
     : null;
+}
+
+function resolveBottleImageStorageMode() {
+  const rawMode = process.env.BOTTLE_IMAGE_STORAGE?.trim().toLowerCase();
+
+  return BOTTLE_IMAGE_STORAGE_MODES.includes(
+    rawMode as (typeof BOTTLE_IMAGE_STORAGE_MODES)[number],
+  )
+    ? (rawMode as (typeof BOTTLE_IMAGE_STORAGE_MODES)[number])
+    : "auto";
+}
+
+function buildInlineBottleImageDataUrl(mimeType: string, fileBuffer: Buffer) {
+  return `data:${mimeType};base64,${fileBuffer.toString("base64")}`;
 }
